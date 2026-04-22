@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - pregunta_salud_mental
+  - pregunta_ansiedad
+  - pregunta_depresion
+  - pregunta_estres
+  - pregunta_terapia
+  - pregunta_autoayuda
+  - pregunta_bienestar
+  - agradecimiento
+  - solicitar_ayuda
+
+responses:
+  utter_saludo:
+    - text: "¡Hola! Soy tu asistente de salud mental. ¿En qué puedo ayudarte hoy?"
+    - text: "¡Bienvenido/a! Estoy aquí para responder tus dudas sobre salud mental. ¿Qué te gustaría saber?"
+
+  utter_despedida:
+    - text: "Fue un gusto poder ayudarte. Recuerda cuidar de tu bienestar mental. ¡Hasta pronto!"
+    - text: "Espero haberte sido de ayuda. Si tienes más preguntas en el futuro, aquí estaré. ¡Cuídate mucho!"
+
+  utter_salud_mental:
+    - text: "La salud mental es un estado de bienestar en el que la persona puede desarrollar su potencial, afrontar las tensiones normales de la vida, trabajar de forma productiva y contribuir a su comunidad. No es simplemente la ausencia de trastornos mentales, sino un estado completo de bienestar físico, mental y social. La salud mental es fundamental para nuestra capacidad colectiva e individual de pensar, expresar emociones, interactuar con los demás y disfrutar de la vida."
+
+  utter_ansiedad:
+    - text: "La ansiedad es una respuesta natural de nuestro cuerpo ante situaciones de estrés o peligro. Sin embargo, cuando esta respuesta se vuelve excesiva, persistente o aparece sin una amenaza real, puede convertirse en un trastorno. Los síntomas incluyen preocupación constante, sensación de nerviosismo, aumento del ritmo cardíaco, tensión muscular y dificultad para concentrarse. Es importante saber que la ansiedad es tratable y existen diversas estrategias y profesionales que pueden ayudarte a manejarla."
+
+  utter_depresion:
+    - text: "La depresión es más que sentirse triste. Es un trastorno del estado de ánimo que causa un sentimiento persistente de tristeza y pérdida de interés. Afecta cómo te sientes, piensas y te comportas, y puede conducir a diversos problemas emocionales y físicos. Los síntomas incluyen sentimientos de tristeza, vacío o desesperanza, pérdida de interés en actividades que antes disfrutabas, problemas de sueño, fatiga, cambios en el apetito, y pensamientos sobre la muerte. La depresión requiere tratamiento, que puede incluir terapia, medicamentos o ambos."
+
+  utter_estres:
+    - text: "El estrés es la respuesta física y emocional del cuerpo ante demandas y presiones. Puede ser positivo a corto plazo, ayudándonos a responder a desafíos inmediatos, pero cuando se vuelve crónico puede afectar seriamente nuestra salud. Los síntomas incluyen tensión muscular, dolores de cabeza, problemas digestivos, dificultad para dormir, irritabilidad y dificultad para concentrarse. Aprender técnicas de manejo del estrés, como la respiración consciente, el ejercicio regular y la organización del tiempo, puede ayudarte a reducirlo."
+
+  utter_terapia:
+    - text: "La terapia o psicoterapia es un tratamiento donde un profesional de la salud mental te ayuda a identificar y cambiar pensamientos y comportamientos problemáticos. Existen diferentes tipos, como la terapia cognitivo-conductual, la terapia psicodinámica, la terapia humanista, entre otras. La terapia puede ser individual, en pareja, familiar o grupal. Es un espacio seguro para explorar tus pensamientos, sentimientos y comportamientos, y desarrollar habilidades para manejar mejor los desafíos de la vida."
+
+  utter_autoayuda:
+    - text: "Las estrategias de autoayuda son acciones que puedes tomar para mejorar tu bienestar mental. Estas incluyen establecer una rutina de sueño saludable, alimentarse balanceadamente, hacer ejercicio regularmente, practicar técnicas de relajación como la meditación o respiración profunda, mantener conexiones sociales positivas, establecer límites saludables, y dedicar tiempo a actividades que disfrutes. Aunque estas estrategias son beneficiosas, recuerda que para problemas más serios es importante buscar ayuda profesional."
+
+  utter_bienestar:
+    - text: "El bienestar mental es un estado positivo donde te sientes bien contigo mismo y con los demás, puedes manejar los altibajos de la vida, desarrollar tu potencial y contribuir a tu comunidad. Los pilares del bienestar incluyen mantener relaciones significativas, cuidar tu cuerpo, encontrar propósito y significado, practicar la autocompasión, manejar el estrés efectivamente y buscar ayuda cuando la necesites. El bienestar mental es un proceso continuo, no un destino fijo."
+
+  utter_agradecimiento:
+    - text: "No hay de qué, estoy aquí para ayudarte. Si tienes más preguntas sobre salud mental, no dudes en consultarme."
+    - text: "Es un placer poder ser útil. Recuerda que cuidar de tu salud mental es tan importante como cuidar de tu salud física."
+
+  utter_solicitar_ayuda:
+    - text: "Si estás atravesando una situación difícil, te recomiendo buscar ayuda profesional. Un psicólogo o psiquiatra puede ofrecerte el apoyo adecuado para tu situación específica. Recuerda que buscar ayuda es un signo de fortaleza, no de debilidad. Si necesitas atención inmediata, contacta a una línea de crisis de salud mental en tu país."
+
+  utter_default:
+    - text: "Lo siento, no he entendido tu pregunta. ¿Podrías reformularla o preguntarme sobre otro tema de salud mental?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

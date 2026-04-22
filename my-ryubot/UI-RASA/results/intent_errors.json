@@ -1,0 +1,522 @@
+[
+  {
+    "text": "siento náuseas por ansiedad",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "preguntar_sobre_ansiedad",
+      "confidence": 0.8179832696914673
+    }
+  },
+  {
+    "text": "técnicas de relajación",
+    "intent": "buscar_ayuda_ansiedad",
+    "intent_prediction": {
+      "name": "agradecer",
+      "confidence": 0.30516767501831055
+    }
+  },
+  {
+    "text": "razones por las que alguien desarrolla un trastorno",
+    "intent": "factores_desencadenantes",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.549335241317749
+    }
+  },
+  {
+    "text": "¿cuántas personas tienen problemas de salud mental?",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "mito_violencia",
+      "confidence": 0.5241580605506897
+    }
+  },
+  {
+    "text": "necesito ayuda con mi salud mental",
+    "intent": "buscar_ayuda",
+    "intent_prediction": {
+      "name": "necesidades_post_diagnostico",
+      "confidence": 0.3121119439601898
+    }
+  },
+  {
+    "text": "¿puedes diagnosticarme?",
+    "intent": "fuera_de_alcance",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.2101394236087799
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saludo",
+      "confidence": 0.9421020150184631
+    }
+  },
+  {
+    "text": "cuál es tu propósito",
+    "intent": "presentacion",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.6590933203697205
+    }
+  },
+  {
+    "text": "tengo miedo sin razón aparente",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.5304433703422546
+    }
+  },
+  {
+    "text": "¿quién puede desarrollar un trastorno mental?",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.9069458842277527
+    }
+  },
+  {
+    "text": "¿puedo desarrollar un trastorno mental en el futuro?",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.9084353446960449
+    }
+  },
+  {
+    "text": "pasos a seguir tras diagnóstico",
+    "intent": "necesidades_post_diagnostico",
+    "intent_prediction": {
+      "name": "diagnosticos_etiquetas",
+      "confidence": 0.8158260583877563
+    }
+  },
+  {
+    "text": "¿debo temer a alguien con problemas mentales?",
+    "intent": "mito_violencia",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.2598320245742798
+    }
+  },
+  {
+    "text": "tengo estos síntomas, ¿qué tengo?",
+    "intent": "fuera_de_alcance",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.98127281665802
+    }
+  },
+  {
+    "text": "me siento sin energía todo el tiempo",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.9710795879364014
+    }
+  },
+  {
+    "text": "estoy triste todo el tiempo",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.9582719206809998
+    }
+  },
+  {
+    "text": "debería buscar terapia",
+    "intent": "buscar_ayuda_depresion",
+    "intent_prediction": {
+      "name": "buscar_ayuda",
+      "confidence": 0.7963710427284241
+    }
+  },
+  {
+    "text": "qué puedo hacer para sentirme mejor",
+    "intent": "buscar_ayuda_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.4868832528591156
+    }
+  },
+  {
+    "text": "saludos",
+    "intent": "saludo",
+    "intent_prediction": {
+      "name": "definicion_salud_mental",
+      "confidence": 0.6405916810035706
+    }
+  },
+  {
+    "text": "nos vemos",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saludo",
+      "confidence": 0.537824809551239
+    }
+  },
+  {
+    "text": "me tengo que ir",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.9659551978111267
+    }
+  },
+  {
+    "text": "me siento nervioso todo el tiempo",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.9654862284660339
+    }
+  },
+  {
+    "text": "tengo temblores",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.33250099420547485
+    }
+  },
+  {
+    "text": "ayuda para ataques de pánico",
+    "intent": "buscar_ayuda_ansiedad",
+    "intent_prediction": {
+      "name": "presentacion",
+      "confidence": 0.46216535568237305
+    }
+  },
+  {
+    "text": "porcentaje de población con trastornos mentales",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.46642932295799255
+    }
+  },
+  {
+    "text": "¿qué especialista trata los problemas mentales?",
+    "intent": "buscar_ayuda",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.7397523522377014
+    }
+  },
+  {
+    "text": "dame un diagnóstico",
+    "intent": "fuera_de_alcance",
+    "intent_prediction": {
+      "name": "necesidades_post_diagnostico",
+      "confidence": 0.9448835253715515
+    }
+  },
+  {
+    "text": "cuáles son los síntomas de depresión",
+    "intent": "preguntar_sobre_depresion",
+    "intent_prediction": {
+      "name": "fuera_de_alcance",
+      "confidence": 0.3972398340702057
+    }
+  },
+  {
+    "text": "me cuesta levantarme de la cama",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.6490137577056885
+    }
+  },
+  {
+    "text": "me siento vacío por dentro",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.6200935244560242
+    }
+  },
+  {
+    "text": "muy amable",
+    "intent": "agradecer",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.27615028619766235
+    }
+  },
+  {
+    "text": "eres de gran ayuda",
+    "intent": "agradecer",
+    "intent_prediction": {
+      "name": "presentacion",
+      "confidence": 0.7711906433105469
+    }
+  },
+  {
+    "text": "diferencia entre estrés y ansiedad",
+    "intent": "preguntar_sobre_ansiedad",
+    "intent_prediction": {
+      "name": "diferencia_salud_trastorno",
+      "confidence": 0.5390588045120239
+    }
+  },
+  {
+    "text": "siento que me falta el aire",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.8492989540100098
+    }
+  },
+  {
+    "text": "me siento intranquilo",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "reportar_sintomas_depresion",
+      "confidence": 0.8093134164810181
+    }
+  },
+  {
+    "text": "cómo controlar la ansiedad",
+    "intent": "buscar_ayuda_ansiedad",
+    "intent_prediction": {
+      "name": "preguntar_sobre_ansiedad",
+      "confidence": 0.9048060774803162
+    }
+  },
+  {
+    "text": "explícame qué significa salud mental",
+    "intent": "definicion_salud_mental",
+    "intent_prediction": {
+      "name": "preguntar_sobre_ansiedad",
+      "confidence": 0.21213075518608093
+    }
+  },
+  {
+    "text": "¿por qué aparecen los problemas de salud mental?",
+    "intent": "factores_desencadenantes",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.28054073452949524
+    }
+  },
+  {
+    "text": "estadísticas de trastornos mentales",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "impacto_crisis",
+      "confidence": 0.41058942675590515
+    }
+  },
+  {
+    "text": "recursos para problemas mentales",
+    "intent": "buscar_ayuda",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.28535032272338867
+    }
+  },
+  {
+    "text": "¿cómo afrontar un diagnóstico de salud mental?",
+    "intent": "necesidades_post_diagnostico",
+    "intent_prediction": {
+      "name": "diagnosticos_etiquetas",
+      "confidence": 0.7132835984230042
+    }
+  },
+  {
+    "text": "¿los trastornos mentales provocan comportamientos violentos?",
+    "intent": "mito_violencia",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.571598470211029
+    }
+  },
+  {
+    "text": "¿el desempleo causa problemas mentales?",
+    "intent": "impacto_crisis",
+    "intent_prediction": {
+      "name": "factores_desencadenantes",
+      "confidence": 0.8749179244041443
+    }
+  },
+  {
+    "text": "relación entre desempleo y depresión",
+    "intent": "impacto_crisis",
+    "intent_prediction": {
+      "name": "preguntar_sobre_depresion",
+      "confidence": 0.958063006401062
+    }
+  },
+  {
+    "text": "¿qué tratamiento necesito?",
+    "intent": "fuera_de_alcance",
+    "intent_prediction": {
+      "name": "buscar_ayuda_depresion",
+      "confidence": 0.3160097002983093
+    }
+  },
+  {
+    "text": "duermo demasiado",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.3309512734413147
+    }
+  },
+  {
+    "text": "cómo superar la depresión",
+    "intent": "buscar_ayuda_depresion",
+    "intent_prediction": {
+      "name": "preguntar_sobre_depresion",
+      "confidence": 0.8495193123817444
+    }
+  },
+  {
+    "text": "quiero salir de esta depresión",
+    "intent": "buscar_ayuda_depresion",
+    "intent_prediction": {
+      "name": "preguntar_sobre_depresion",
+      "confidence": 0.8590275049209595
+    }
+  },
+  {
+    "text": "qué tal",
+    "intent": "saludo",
+    "intent_prediction": {
+      "name": "presentacion",
+      "confidence": 0.4741740822792053
+    }
+  },
+  {
+    "text": "adiós",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saludo",
+      "confidence": 0.4080960154533386
+    }
+  },
+  {
+    "text": "que tengas buen día",
+    "intent": "despedida",
+    "intent_prediction": {
+      "name": "saludo",
+      "confidence": 0.7434225678443909
+    }
+  },
+  {
+    "text": "cómo funcionas",
+    "intent": "presentacion",
+    "intent_prediction": {
+      "name": "saludo",
+      "confidence": 0.4143737256526947
+    }
+  },
+  {
+    "text": "tengo problemas para dormir por ansiedad",
+    "intent": "reportar_sintomas_ansiedad",
+    "intent_prediction": {
+      "name": "buscar_ayuda_ansiedad",
+      "confidence": 0.9051728844642639
+    }
+  },
+  {
+    "text": "qué hacer cuando me siento ansioso",
+    "intent": "buscar_ayuda_ansiedad",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.965543270111084
+    }
+  },
+  {
+    "text": "¿qué desencadena problemas de salud mental?",
+    "intent": "factores_desencadenantes",
+    "intent_prediction": {
+      "name": "impacto_crisis",
+      "confidence": 0.27343130111694336
+    }
+  },
+  {
+    "text": "¿qué tan frecuentes son los problemas de salud mental?",
+    "intent": "probabilidad_trastorno",
+    "intent_prediction": {
+      "name": "diferencia_salud_trastorno",
+      "confidence": 0.24316804111003876
+    }
+  },
+  {
+    "text": "¿los enfermos mentales son agresivos?",
+    "intent": "mito_violencia",
+    "intent_prediction": {
+      "name": "buscar_ayuda",
+      "confidence": 0.33460620045661926
+    }
+  },
+  {
+    "text": "¿trastorno mental es retraso mental?",
+    "intent": "mito_inteligencia",
+    "intent_prediction": {
+      "name": "diferencia_salud_trastorno",
+      "confidence": 0.6570959687232971
+    }
+  },
+  {
+    "text": "pobreza y trastornos mentales",
+    "intent": "impacto_crisis",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.33567148447036743
+    }
+  },
+  {
+    "text": "diferencia entre tristeza y depresión",
+    "intent": "preguntar_sobre_depresion",
+    "intent_prediction": {
+      "name": "diferencia_salud_trastorno",
+      "confidence": 0.8023194670677185
+    }
+  },
+  {
+    "text": "no veo futuro para mí",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "probabilidad_trastorno",
+      "confidence": 0.6319314241409302
+    }
+  },
+  {
+    "text": "me siento culpable sin razón",
+    "intent": "reportar_sintomas_depresion",
+    "intent_prediction": {
+      "name": "reportar_sintomas_ansiedad",
+      "confidence": 0.9926689863204956
+    }
+  },
+  {
+    "text": "técnicas contra la depresión",
+    "intent": "buscar_ayuda_depresion",
+    "intent_prediction": {
+      "name": "buscar_ayuda_ansiedad",
+      "confidence": 0.6956828236579895
+    }
+  },
+  {
+    "text": "buenos días",
+    "intent": "saludo",
+    "intent_prediction": {
+      "name": "despedida",
+      "confidence": 0.5267288088798523
+    }
+  },
+  {
+    "text": "qué tipo de ayuda ofreces",
+    "intent": "presentacion",
+    "intent_prediction": {
+      "name": "buscar_ayuda",
+      "confidence": 0.5730383992195129
+    }
+  }
+]

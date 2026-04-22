@@ -1,0 +1,231 @@
+version: "3.1"
+
+nlu:
+  - intent: saludo
+    examples: |
+      - hola
+      - buenos días
+      - buenas tardes
+      - buenas noches
+      - qué tal
+      - saludos
+      - hey
+      - ey
+      - hola bot
+      - hola amigo
+      - qué onda
+      - qué más
+      - cómo vas
+      - cómo estás
+      - holi
+      - holita
+      - buenas
+      - bienvenido
+      - hey qué tal
+      - qué hay
+      - buen día
+      - feliz día
+      - saludito
+      - saludos cordiales
+      - cómo te va
+      - qué fue
+      - qué haces
+      - cómo amaneciste
+      - cómo andas
+      - qué se dice
+      - qué cuentas
+      - qué hay de nuevo
+      - hola hola
+      - holaaa
+      - muy buenas
+      - buena jornada
+      - qué tal estás
+      - buen comienzo de día
+      - buenas noches bot
+      - buenas tardes chatbot
+      - hola cómo va todo
+      - cómo está todo
+      - qué más pues
+      - qué pasa
+      - un saludo
+      - hola qué haces
+      - cómo va eso
+      - hola crack
+      - hola máquina
+      - qué hubo
+      - saludando
+      - hola otra vez
+      - hola querido
+      - hola estimado
+      - hola asistente
+      - muy buenas tardes
+      - buenas noches amigo
+      - saludos chatbot
+      - un gusto saludarte
+
+  - intent: despedida
+    examples: |
+      - adiós
+      - hasta luego
+      - nos vemos
+      - chao
+      - hasta pronto
+      - me tengo que ir
+      - bye
+      - hasta mañana
+      - que tengas buen día
+      - hasta la próxima
+      - cuídate
+      - hasta luego amigo
+      - que descanses
+      - hablamos después
+      - nos hablamos
+      - que tengas una buena noche
+      - hasta otra
+      - chau chau
+      - bye bye
+      - hasta entonces
+      - fue un gusto
+      - nos vemos luego
+      - que te vaya bien
+      - hasta el próximo chat
+      - hablamos pronto
+      - hasta mañana bot
+      - hasta más tarde
+      - hasta la próxima vez
+      - descansa
+      - hasta que nos veamos
+      - adiós amigo
+      - me despido
+      - que estés bien
+      - que tengas un buen día
+      - hasta dentro de poco
+      - ya me voy
+      - cierro sesión
+      - fin del chat
+      - terminó por hoy
+      - un placer
+      - nos leemos
+      - nos encontramos luego
+      - que pases buena tarde
+      - hasta otro día
+      - gracias y adiós
+      - me retiro
+      - hasta aquí llego
+      - seguimos luego
+      - bueno, me voy
+      - chaito
+      - nos vemos pronto
+      - me tengo que ir ya
+      - dejo el chat
+      - cerrar sesión
+      - me desconecto
+      - a descansar
+      - chau querido bot
+      - hasta siempre
+
+  - intent: agradecer
+    examples: |
+      - te agradezco mucho
+      - gracias por estar ahí
+      - muy agradecido
+      - te lo agradezco de corazón
+      - mil gracias
+      - infinitas gracias
+      - eternamente agradecido
+      - gracias de verdad
+      - gracias por tu apoyo
+      - gracias por entenderme
+      - gracias por escucharme
+      - muchas gracias por todo
+      - te agradezco tu tiempo
+      - qué amable
+      - gracias por tus palabras
+      - gracias por responderme
+      - qué bonito lo que dijiste
+      - me ayudaste mucho
+      - gracias por tu ayuda emocional
+      - gracias por estar disponible
+      - gracias por acompañarme
+      - aprecio tu ayuda
+      - gracias por todo
+      - me siento agradecido
+      - gracias de antemano
+      - gracias por tu comprensión
+      - estoy agradecido contigo
+      - qué buen apoyo
+      - gracias por el consejo
+      - me encantó tu respuesta
+      - eres muy atento
+      - gracias por tu atención
+      - un millón de gracias
+      - gracias, de verdad
+      - gracias por preocuparte
+      - no sabes cuánto te agradezco
+      - me hiciste sentir mejor
+      - valoro tu ayuda
+      - gracias, bot
+      - gracias por ser tan claro
+      - gracias, de corazón
+      - me ayudaste bastante
+      - gracias por explicarme
+      - gracias por estar al pendiente
+      - estoy muy agradecido
+      - muchas gracias por acompañarme
+      - gracias por tu guía
+      - gracias, lo necesitaba
+      - gracias por tu compañía
+      - gracias por ser tan útil
+
+  - intent: presentacion
+    examples: |
+      - eres un asistente virtual
+      - cuál es tu nombre
+      - dime cómo te llamas
+      - eres una IA
+      - qué tipo de bot eres
+      - cuál es tu función
+      - eres real
+      - cómo fue que te crearon
+      - qué sabes hacer
+      - cuál es tu trabajo
+      - puedes contarme sobre ti
+      - eres un programa
+      - estás hecho con inteligencia artificial
+      - qué conocimientos tienes
+      - cuál es tu rol
+      - qué tareas haces
+      - eres inteligente
+      - cómo debería usarte
+      - quién te diseñó
+      - puedes explicarte
+      - qué puedes ofrecerme
+      - cuál es tu propósito
+      - qué me puedes contar de ti
+      - eres un chatbot
+      - eres un robot
+      - quién te programó
+      - cómo me puedes ayudar
+      - cuéntame sobre tu sistema
+      - cómo fuiste creado
+      - qué te hace diferente
+      - eres útil para qué
+      - cómo te programaron
+      - cuál es tu especialidad
+      - qué funciones tienes
+      - cómo ayudas a las personas
+      - estás hecho para ayudarme
+      - qué tipo de información manejas
+      - en qué estás entrenado
+      - eres un bot de apoyo emocional
+      - qué puedes conversar
+      - me puedes decir qué haces
+      - eres parte de un proyecto
+      - puedes describirte
+      - quién eres exactamente
+      - para qué estás aquí
+      - cuál es tu tarea
+      - cuál es tu función principal
+      - cómo te presentas
+      - cómo te describirías
+      - qué clase de asistente eres

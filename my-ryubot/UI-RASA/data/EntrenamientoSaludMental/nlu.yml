@@ -1,0 +1,693 @@
+version: "3.1"
+
+nlu:
+  - intent: sintomas_emocionales
+    examples: |
+      - Me siento muy [triste](sintoma:emocional) últimamente
+      - Estoy [ansioso](sintoma:emocional) todo el tiempo
+      - Me [irrito](sintoma:emocional) con facilidad
+      - No puedo controlar mi [ansiedad](sintoma:emocional)
+      - Me siento sin [esperanza](sintoma:emocional)
+      - Tengo [cambios de humor](sintoma:emocional) constantes
+      - Me siento [vacío](sintoma:emocional) por dentro
+      - Estoy [deprimido](sintoma:emocional) desde hace semanas
+      - Me siento [abrumado](sintoma:emocional) por mis emociones
+      - No puedo evitar sentirme [culpable](sintoma:emocional) todo el tiempo
+      - Me invade una [tristeza](sintoma:emocional) profunda sin razón aparente
+      - Siento [miedo](sintoma:emocional) irracional a menudo
+      - Me domina la [angustia](sintoma:emocional) cuando pienso en el futuro
+      - Tengo episodios de [pánico](sintoma:emocional) frecuentes
+      - Me siento [indefenso](sintoma:emocional) ante mi situación
+      - No encuentro [alegría](sintoma:emocional) en nada
+      - Experimento [frustración](sintoma:emocional) constante
+      - Me siento [rechazado](sintoma:emocional) por todos
+      - Tengo [ataques de llanto](sintoma:emocional) sin motivo aparente
+      - Me invade una sensación de [soledad](sintoma:emocional) aunque esté acompañado
+      - Siento [vergüenza](sintoma:emocional) de mí mismo
+      - Experimento [inseguridad](sintoma:emocional) en situaciones sociales
+      - La [melancolía](sintoma:emocional) no me deja disfrutar
+      - Siento [resentimiento](sintoma:emocional) hacia personas que me han herido
+      - Me siento emocionalmente [exhausto](sintoma:emocional)
+      - No puedo manejar mi [irritabilidad](sintoma:emocional)
+      - Me invade la [nostalgia](sintoma:emocional) por tiempos mejores
+      - Siento una [desesperanza](sintoma:emocional) constante
+      - No puedo controlar mi [enojo](sintoma:emocional)
+      - Tengo [arrebatos emocionales](sintoma:emocional) impredecibles
+      - Mi [humor](sintoma:emocional) cambia drásticamente sin razón
+      - Me siento [vulnerable](sintoma:emocional) todo el tiempo
+      - No consigo sentir [entusiasmo](sintoma:emocional) por nada
+      - La [apatía](sintoma:emocional) domina mi día a día
+      - Siento [desesperación](sintoma:emocional) cuando pienso en mi situación
+      - Estoy constantemente [preocupado](sintoma:emocional)
+      - No puedo superar este [duelo](sintoma:emocional)
+      - Siento [desconfianza](sintoma:emocional) hacia todos
+      - Me invade el [pesimismo](sintoma:emocional) sobre el futuro
+      - No puedo superar mi [trauma](sintoma:emocional)
+      - Tengo [celos](sintoma:emocional) irracionales
+      - Siento [confusión emocional](sintoma:emocional) constante
+      - Tengo [miedo al rechazo](sintoma:emocional) paralizante
+      - Me siento [humillado](sintoma:emocional) por experiencias pasadas
+      - Sufro de [paranoia](sintoma:emocional) en situaciones sociales
+      - No puedo manejar la [decepción](sintoma:emocional)
+      - Me siento [menospreciado](sintoma:emocional) por todos
+      - Siento [rencor](sintoma:emocional) y no puedo liberarme
+      - Tengo [fobia social](sintoma:emocional) y me paraliza
+      - Me siento [desconectado](sintoma:emocional) de mis propias emociones
+      - La [impotencia](sintoma:emocional) me domina
+      - Siento [desprecio](sintoma:emocional) hacia mí mismo
+      - Me [bloqueo emocionalmente](sintoma:emocional) en situaciones estresantes
+      - Tengo un profundo sentimiento de [inadecuación](sintoma:emocional)
+
+  - intent: sintomas_cognitivos
+    examples: |
+      - No puedo [concentrarme](sintoma:cognitivo) en nada
+      - Solo pienso [cosas negativas](sintoma:cognitivo)
+      - Mi mente está siempre [preocupada](sintoma:cognitivo)
+      - Tengo [dificultad para tomar decisiones](sintoma:cognitivo)
+      - No puedo dejar de [darle vueltas a las cosas](sintoma:cognitivo)
+      - Me [olvido](sintoma:cognitivo) de las cosas fácilmente
+      - Mi [memoria](sintoma:cognitivo) está fallando últimamente
+      - Me cuesta [mantener la atención](sintoma:cognitivo) en una tarea
+      - Tengo [pensamientos intrusivos](sintoma:cognitivo) constantes
+      - No puedo [planificar](sintoma:cognitivo) nada sin agobiarme
+      - Me [distraigo](sintoma:cognitivo) con cualquier cosa
+      - Tengo la [mente nublada](sintoma:cognitivo) todo el tiempo
+      - Me es imposible [pensar con claridad](sintoma:cognitivo)
+      - Sufro de [bloqueos mentales](sintoma:cognitivo) frecuentes
+      - No consigo [organizar mis ideas](sintoma:cognitivo)
+      - Tengo [dificultad para hablar](sintoma:cognitivo) con fluidez
+      - Experimento [confusión mental](sintoma:cognitivo) constantemente
+      - Me cuesta [recordar conversaciones](sintoma:cognitivo) recientes
+      - Tengo [dificultad para comprender](sintoma:cognitivo) textos complejos
+      - Me [obsesiono](sintoma:cognitivo) con detalles irrelevantes
+      - Me cuesta [priorizar tareas](sintoma:cognitivo)
+      - Tengo [pensamientos recurrentes](sintoma:cognitivo) que no puedo controlar
+      - No logro [resolver problemas](sintoma:cognitivo) simples
+      - Me [autocritico](sintoma:cognitivo) excesivamente
+      - Tengo [dificultad para aprender](sintoma:cognitivo) cosas nuevas
+      - No puedo [retener información](sintoma:cognitivo) como antes
+      - Me cuesta [expresar mis ideas](sintoma:cognitivo) con coherencia
+      - Mi [capacidad de razonamiento](sintoma:cognitivo) ha disminuido
+      - Me [juzgo](sintoma:cognitivo) constantemente
+      - Tengo [pensamientos catastróficos](sintoma:cognitivo) sobre el futuro
+      - Me [anticipo negativamente](sintoma:cognitivo) a todo
+      - He perdido [creatividad](sintoma:cognitivo) y capacidad de innovación
+      - No puedo [visualizar soluciones](sintoma:cognitivo)
+      - Tengo [dificultad para calcular](sintoma:cognitivo) o manejar números
+      - Me siento [mentalmente lento](sintoma:cognitivo)
+      - No puedo [finalizar mis pensamientos](sintoma:cognitivo)
+      - Tengo [lapsus mentales](sintoma:cognitivo) frecuentes
+      - Experimento [rigidez mental](sintoma:cognitivo)
+      - No puedo [imaginar](sintoma:cognitivo) un futuro positivo
+      - Me [autosaboteo](sintoma:cognitivo) con pensamientos negativos
+      - Tengo un [diálogo interno](sintoma:cognitivo) muy crítico
+      - Me cuesta [mantener conversaciones](sintoma:cognitivo)
+      - Tengo [pensamientos irracionales](sintoma:cognitivo) que reconozco como tales
+      - Me siento [mentalmente agotado](sintoma:cognitivo) todo el tiempo
+      - No puedo [concentrarme en lecturas](sintoma:cognitivo)
+      - Tengo [dificultades para seguir instrucciones](sintoma:cognitivo) sencillas
+      - No consigo [ordenar mis prioridades](sintoma:cognitivo)
+      - Me [persiguen ideas](sintoma:cognitivo) que no puedo desechar
+      - Tengo [desorientación](sintoma:cognitivo) frecuente
+      - Experimento [disociación](sintoma:cognitivo) o sensación de irrealidad
+      - No puedo [controlar mis pensamientos](sintoma:cognitivo) negativos
+      - Me [cuesta estudiar](sintoma:cognitivo) o aprender
+
+  - intent: sintomas_fisicos
+    examples: |
+      - No puedo [dormir bien](sintoma:fisico)
+      - Me siento [cansado](sintoma:fisico) todo el tiempo
+      - Tengo [dolores de cabeza](sintoma:fisico) constantes sin razón médica
+      - He perdido el [apetito](sintoma:fisico)
+      - Tengo [problemas digestivos](sintoma:fisico) por estrés
+      - Siento [tensión muscular](sintoma:fisico) constante
+      - Sufro de [insomnio](sintoma:fisico) crónico
+      - Tengo [palpitaciones](sintoma:fisico) sin hacer ejercicio
+      - Siento [temblores](sintoma:fisico) en las manos
+      - He ganado [peso](sintoma:fisico) sin cambiar mi dieta
+      - He perdido [peso](sintoma:fisico) sin intentarlo
+      - Tengo [sudoraciones](sintoma:fisico) repentinas
+      - Siento [mareos](sintoma:fisico) frecuentes
+      - Experimento [fatiga crónica](sintoma:fisico)
+      - Tengo [dolor de espalda](sintoma:fisico) constante
+      - Siento [opresión en el pecho](sintoma:fisico)
+      - Sufro de [taquicardias](sintoma:fisico) frecuentes
+      - Tengo [problemas de piel](sintoma:fisico) como eccemas o psoriasis
+      - Sufro de [sequedad en la boca](sintoma:fisico) constantemente
+      - Tengo [dificultad para respirar](sintoma:fisico) sin razón médica
+      - Experimento [sensación de ahogo](sintoma:fisico)
+      - Tengo [náuseas](sintoma:fisico) frecuentes
+      - Sufro de [vómitos](sintoma:fisico) por ansiedad
+      - Tengo [diarrea](sintoma:fisico) recurrente por nervios
+      - Sufro de [estreñimiento](sintoma:fisico) crónico
+      - Tengo [dolor en las articulaciones](sintoma:fisico) sin explicación
+      - Siento [adormecimiento](sintoma:fisico) en extremidades
+      - Tengo [visión borrosa](sintoma:fisico) cuando estoy estresado
+      - Sufro de [zumbidos en los oídos](sintoma:fisico)
+      - Tengo [rechinar de dientes](sintoma:fisico) o bruxismo
+      - Sufro de [hipersensibilidad](sintoma:fisico) a ruidos o luces
+      - Tengo [boca seca](sintoma:fisico) constantemente
+      - Sufro de [dificultad para tragar](sintoma:fisico)
+      - Tengo [calambres musculares](sintoma:fisico) frecuentes
+      - Experimento [desajustes hormonales](sintoma:fisico)
+      - Tengo [problemas menstruales](sintoma:fisico) relacionados con estrés
+      - Sufro de [caída del cabello](sintoma:fisico) excesiva
+      - Tengo [alergias](sintoma:fisico) que empeoran con el estrés
+      - Sufro de [hiperventilación](sintoma:fisico) frecuente
+      - Tengo [presión arterial alta](sintoma:fisico) por estrés
+      - Sufro de [agotamiento físico](sintoma:fisico) constante
+      - Tengo [dolores musculares](sintoma:fisico) sin explicación
+      - Experimento [sensación de hormigueo](sintoma:fisico) en el cuerpo
+      - Tengo [sensibilidad digestiva](sintoma:fisico) extrema
+      - Sufro de [acidez estomacal](sintoma:fisico) crónica
+      - Tengo [ojos secos](sintoma:fisico) o irritados constantemente
+      - Experimento [ronquera](sintoma:fisico) frecuente sin estar resfriado
+      - Tengo [contracturas](sintoma:fisico) musculares persistentes
+      - Sufro de [infecciones frecuentes](sintoma:fisico) por bajada de defensas
+      - He notado [cambios en mi libido](sintoma:fisico)
+
+  - intent: sintomas_conductuales
+    examples: |
+      - No quiero [ver a nadie](sintoma:conductual)
+      - Estoy [dejando todas mis tareas para después](sintoma:conductual)
+      - He empezado a [beber más alcohol](sintoma:conductual)
+      - He [abandonado actividades](sintoma:conductual) que antes disfrutaba
+      - [Evito salir de casa](sintoma:conductual)
+      - Estoy [consumiendo sustancias](sintoma:conductual) para sentirme mejor
+      - Me he vuelto [irritable](sintoma:conductual) con mis seres queridos
+      - Estoy [aislándome socialmente](sintoma:conductual)
+      - He [descuidado mi higiene personal](sintoma:conductual)
+      - [Procrastino](sintoma:conductual) constantemente
+      - He [aumentado el consumo de comida](sintoma:conductual) compulsivamente
+      - Estoy [fumando más](sintoma:conductual) que antes
+      - [Lloro](sintoma:conductual) con frecuencia sin poder controlarlo
+      - Me [desquito con otros](sintoma:conductual) injustamente
+      - He [abandonado mi rutina](sintoma:conductual) diaria
+      - [Evito responder llamadas](sintoma:conductual) o mensajes
+      - Estoy [descuidando mis responsabilidades](sintoma:conductual)
+      - [Me aislo](sintoma:conductual) de familia y amigos
+      - He [dejado de hacer ejercicio](sintoma:conductual)
+      - [Consumo medicamentos](sintoma:conductual) sin prescripción
+      - [Duermo demasiado](sintoma:conductual) para evitar enfrentar problemas
+      - He [abandonado mis estudios](sintoma:conductual)
+      - [Tengo conductas agresivas](sintoma:conductual) inusuales en mí
+      - [Falto frecuentemente](sintoma:conductual) al trabajo o escuela
+      - He [dejado de comer regularmente](sintoma:conductual)
+      - [Compro compulsivamente](sintoma:conductual) sin necesitarlo
+      - [Juego excesivamente](sintoma:conductual) a videojuegos para escapar
+      - [Evito el contacto visual](sintoma:conductual) con los demás
+      - He [descuidado mi apariencia](sintoma:conductual) personal
+      - [Reviso obsesivamente](sintoma:conductual) mi teléfono o redes sociales
+      - [Me autolesiono](sintoma:conductual) cuando me siento mal
+      - [Discuto constantemente](sintoma:conductual) con familiares o amigos
+      - [Suspendo compromisos](sintoma:conductual) a último momento
+      - He [abandonado hobbies](sintoma:conductual) que me apasionaban
+      - [Me encierro en mi habitación](sintoma:conductual) por largos períodos
+      - [Como por ansiedad](sintoma:conductual) sin hambre real
+      - [Dejo de comer](sintoma:conductual) por períodos prolongados
+      - [Tengo arrebatos de ira](sintoma:conductual) desproporcionados
+      - [Miento](sintoma:conductual) sobre cómo me siento realmente
+      - [Evito situaciones sociales](sintoma:conductual) que antes disfrutaba
+      - [Descuido mis mascotas](sintoma:conductual) o plantas
+      - [Trabajo en exceso](sintoma:conductual) para evitar pensamientos negativos
+      - [Me automédico](sintoma:conductual) para dormir o calmarme
+      - [Dejo proyectos](sintoma:conductual) sin terminar constantemente
+      - [Tengo peleas](sintoma:conductual) frecuentes con mi pareja
+      - [Evito actividades grupales](sintoma:conductual) a toda costa
+      - [Tengo comportamientos obsesivos](sintoma:conductual) de limpieza
+      - [Reviso repetidamente](sintoma:conductual) cosas como cerraduras o gas
+      - [He cancelado planes](sintoma:conductual) importantes sin motivo real
+      - [He descuidado mi alimentación](sintoma:conductual) completamente
+
+  - intent: crisis
+    examples: |
+      - Creo que voy a tener un [ataque de pánico](sintoma:crisis)
+      - No quiero [seguir viviendo](sintoma:crisis)
+      - A veces pienso en [hacerme daño](sintoma:crisis)
+      - Siento que [no puedo respirar](sintoma:crisis)
+      - Mi [corazón late muy rápido](sintoma:crisis) y siento que me voy a desmayar
+      - Tengo [pensamientos suicidas](sintoma:crisis)
+      - Estoy considerando [quitarme la vida](sintoma:crisis)
+      - Siento que estoy [perdiendo el control](sintoma:crisis) completamente
+      - Tengo [miedo de lastimarme](sintoma:crisis) a mí mismo
+      - [No veo salida](sintoma:crisis) a mi situación
+      - Estoy [hiperventilando](sintoma:crisis)
+      - Siento una [opresión en el pecho](sintoma:crisis) insoportable
+      - Estoy completamente [paralizado por el miedo](sintoma:crisis)
+      - [No puedo dejar de temblar](sintoma:crisis)
+      - Siento que estoy [teniendo un infarto](sintoma:crisis)
+      - [Estoy disociando](sintoma:crisis) completamente
+      - Siento que [no es real](sintoma:crisis) lo que estoy viviendo
+      - Tengo [miedo de volverme loco](sintoma:crisis)
+      - Estoy teniendo [alucinaciones](sintoma:crisis)
+      - [No reconozco dónde estoy](sintoma:crisis)
+      - Siento que [me estoy muriendo](sintoma:crisis)
+      - [No puedo moverme](sintoma:crisis) del miedo
+      - Tengo [náuseas extremas](sintoma:crisis) y vómitos por ansiedad
+      - Estoy [empapado en sudor frío](sintoma:crisis)
+      - [No distingo qué es real](sintoma:crisis)
+      - Siento [hormigueo intenso](sintoma:crisis) en todo el cuerpo
+      - Tengo [pensamientos de autoagresión](sintoma:crisis)
+      - He [elaborado un plan](sintoma:crisis) para suicidarme
+      - Creo que [nadie me extrañaría](sintoma:crisis) si desaparezco
+      - Siento [deseos de desaparecer](sintoma:crisis) para siempre
+      - [No tengo razones para seguir](sintoma:crisis) adelante
+      - [Estoy al límite](sintoma:crisis) de mi resistencia
+      - [No puedo más](sintoma:crisis) con esta situación
+      - Siento que estoy [perdiendo el contacto](sintoma:crisis) con la realidad
+      - Estoy experimentando [sensaciones extrañas](sintoma:crisis) en mi cuerpo
+      - Tengo [miedo incontrolable](sintoma:crisis)
+      - Siento que me estoy [ahogando](sintoma:crisis)
+      - [No logro calmarme](sintoma:crisis) de ninguna manera
+      - Tengo [visión en túnel](sintoma:crisis)
+      - Me siento [desconectado de mi cuerpo](sintoma:crisis)
+      - [No puedo pensar claramente](sintoma:crisis), todo es confusión
+      - Estoy teniendo [pensamientos acelerados](sintoma:crisis) que no puedo controlar
+      - Siento que [algo terrible va a pasar](sintoma:crisis)
+      - Tengo [miedo de perder el control](sintoma:crisis) y hacer algo grave
+      - [No puedo soportar este dolor](sintoma:crisis) emocional
+      - Siento [desesperación absoluta](sintoma:crisis)
+      - He [preparado una nota](sintoma:crisis) de despedida
+      - Estoy teniendo una [crisis existencial](sintoma:crisis) severa
+      - [No encuentro razones](sintoma:crisis) para seguir luchando
+      - Siento que estoy en un [estado de pánico constante](sintoma:crisis)
+
+  - intent: inform
+    examples: |
+      - [leve](intensidad)
+      - [moderado](intensidad)
+      - [severo](intensidad)
+      - Es [leve](intensidad)
+      - Diría que es [moderado](intensidad)
+      - Definitivamente es [severo](intensidad)
+      - Es un ataque de [pánico](tipo_crisis)
+      - Estoy teniendo pensamientos [suicidas](tipo_crisis)
+      - Lo calificaría como [leve](intensidad)
+      - Siento que es [moderado](intensidad) tendiendo a severo
+      - Es extremadamente [severo](intensidad)
+      - Considero que es [leve](intensidad) por ahora
+      - Ha alcanzado un nivel [moderado](intensidad)
+      - Está en el rango [severo](intensidad)
+      - Es bastante [leve](intensidad) aún
+      - Ha progresado a [moderado](intensidad)
+      - Ha llegado a ser [severo](intensidad)
+      - Es relativamente [leve](intensidad)
+      - Es un caso [moderado](intensidad)
+      - Es un episodio [severo](intensidad)
+      - Lo describiría como [leve](intensidad)
+      - Podría clasificarlo como [moderado](intensidad)
+      - Sin duda es [severo](intensidad)
+      - En mi opinión es [leve](intensidad)
+      - Creo que es [moderado](intensidad)
+      - Estoy seguro que es [severo](intensidad)
+      - Parece ser [leve](intensidad)
+      - Me parece que es [moderado](intensidad)
+      - Es claramente [severo](intensidad)
+      - Se presenta como [leve](intensidad)
+      - Se manifiesta como [moderado](intensidad)
+      - Se evidencia como [severo](intensidad)
+      - Tengo episodios de [pánico](tipo_crisis)
+      - Experimento ideas [suicidas](tipo_crisis)
+      - Sufro ataques de [pánico](tipo_crisis) frecuentes
+      - A veces tengo pensamientos [suicidas](tipo_crisis)
+      - Me dan crisis de [pánico](tipo_crisis)
+      - Tengo tendencias [suicidas](tipo_crisis)
+      - Es [ansiedad](tipo_crisis) generalizada
+      - Son pensamientos [obsesivos](tipo_crisis)
+      - Es [depresión](tipo_crisis) clínica
+      - Es [angustia](tipo_crisis) extrema
+      - Son [alucinaciones](tipo_crisis)
+      - Es [paranoia](tipo_crisis)
+      - Son [flashbacks](tipo_crisis) traumáticos
+      - Es [disociación](tipo_crisis)
+      - Son [compulsiones](tipo_crisis)
+      - Es un episodio [maníaco](tipo_crisis)
+      - Es [psicosis](tipo_crisis)
+      - Son [delirios](tipo_crisis)
+      - Es [trastorno bipolar](tipo_crisis)
+      - Son [autolesiones](tipo_crisis)
+
+  - intent: afirmar
+    examples: |
+      - sí
+      - claro
+      - por supuesto
+      - correcto
+      - exacto
+      - así es
+      - afirmativo
+      - efectivamente
+      - en efecto
+      - ciertamente
+      - definitivamente
+      - completamente de acuerdo
+      - totalmente
+      - sin duda
+      - indudablemente
+      - absolutamente
+      - desde luego
+      - claramente
+      - cierto
+      - confirmo
+      - lo confirmo
+      - es verdad
+      - verdadero
+      - es cierto
+      - es correcto
+      - has acertado
+      - tienes razón
+      - estás en lo cierto
+      - coincido
+      - estoy de acuerdo
+      - concuerdo
+      - me parece bien
+      - lo afirmo
+      - lo aseguro
+      - puedo confirmarlo
+      - sí, es así
+      - sí, por favor
+      - sí, eso es
+      - sí, exactamente
+      - sí, adelante
+      - sí, continúa
+      - sí, me gustaría
+      - sí, lo necesito
+      - sí, lo quiero
+      - sí, lo deseo
+      - sí, lo prefiero
+      - sí, me interesa
+      - sí, por favor procede
+      - sí, hazlo
+      - sí, continúa
+      - sí, ayúdame con eso
+
+  - intent: negar
+    examples: |
+      - no
+      - para nada
+      - nunca
+      - negativo
+      - no lo creo
+      - no es así
+      - en absoluto
+      - de ninguna manera
+      - jamás
+      - imposible
+      - falso
+      - incorrecto
+      - no estoy de acuerdo
+      - discrepo
+      - definitivamente no
+      - no es cierto
+      - no es verdad
+      - te equivocas
+      - estás equivocado
+      - no es correcto
+      - no lo confirmo
+      - me niego
+      - lo niego
+      - lo rechazo
+      - no exactamente
+      - no necesariamente
+      - no del todo
+      - no quiero
+      - no me interesa
+      - no es eso
+      - no me refiero a eso
+      - no es lo que busco
+      - no hablo de eso
+      - no es lo que necesito
+      - no es lo que pienso
+      - no es lo que siento
+      - no es mi intención
+      - no me convence
+      - no lo considero así
+      - no lo veo así
+      - no lo experimento así
+      - no estoy seguro
+      - no puedo confirmarlo
+      - no me parece adecuado
+      - no concuerdo con eso
+      - no va por ahí
+      - no es mi caso
+      - no, gracias
+      - no quiero continuar
+      - no deseo seguir
+      - no procede
+      - no siga
+
+  - intent: trastorno_ansiedad
+    examples: |
+      - Me han diagnosticado [trastorno de ansiedad generalizada](trastorno)
+      - Sufro de [crisis de pánico](trastorno) recurrentes
+      - Tengo [ansiedad social](trastorno) y me cuesta mucho relacionarme
+      - Me diagnosticaron [TOC](trastorno) (trastorno obsesivo compulsivo)
+      - Tengo [fobias](trastorno) que limitan mi vida diaria
+      - No puedo controlar mi [ansiedad](trastorno)
+      - A veces siento [ataques de pánico](trastorno) sin razón aparente
+      - Me preocupo [excesivamente](trastorno) por todo
+      - Tengo episodios de [ansiedad](trastorno) por las noches
+      - No puedo salir de casa por mi [ansiedad social](trastorno)
+      - He tenido [ataques de pánico](trastorno) en lugares públicos
+      - Mi [TOC](trastorno) me hace revisar todo muchas veces
+      - Siento [ansiedad](trastorno) sin un motivo claro
+      - Me paraliza la [fobia social](trastorno)
+      - Me sudan las manos por [nerviosismo extremo](trastorno)
+      - Evito lugares por [ansiedad anticipatoria](trastorno)
+      - Me asusta tener un nuevo [ataque de pánico](trastorno)
+      - Vivo con [ansiedad generalizada](trastorno) todo el día
+      - La [hipervigilancia](trastorno) me agota mentalmente
+      - Estoy medicado por [trastorno de ansiedad](trastorno)
+      - La [ansiedad](trastorno) no me deja dormir
+      - Me diagnosticaron [ansiedad mixta](trastorno)
+      - Siento [miedo irracional](trastorno) constantemente
+      - Tengo pensamientos acelerados por la [ansiedad](trastorno)
+      - No puedo controlar mi [obsesión](trastorno) por la limpieza
+      - La [ansiedad social](trastorno) me impide ir a fiestas
+      - He tenido [crisis de angustia](trastorno) en clase
+      - Vivo con un [trastorno de ansiedad](trastorno) que me limita
+
+  - intent: trastorno_depresion
+    examples: |
+      - Estoy en tratamiento por [depresión mayor](trastorno)
+      - Me diagnosticaron [depresión crónica](trastorno)
+      - Sufro de [distimia](trastorno) desde hace años
+      - Mi [depresión](trastorno) no mejora con medicamentos
+      - Tengo [depresión estacional](trastorno)
+      - He recaído en mi [depresión](trastorno)
+      - No encuentro motivación para nada, creo que es [depresión](trastorno)
+      - La [melancolía](trastorno) no me deja funcionar normalmente
+      - No tengo ganas de levantarme por la [depresión](trastorno)
+      - Mi [distimia](trastorno) me hace sentir apagado constantemente
+      - No le encuentro sentido a nada por la [depresión](trastorno)
+      - Estoy en tratamiento por [depresión persistente](trastorno)
+      - La [depresión estacional](trastorno) me afecta cada invierno
+      - Me siento atrapado en mi [tristeza](trastorno)
+      - Tengo [episodios depresivos](trastorno) frecuentes
+      - No me gusta nada de lo que antes me gustaba, creo que es [depresión](trastorno)
+      - No tengo energía por la [depresión](trastorno)
+      - Me cuesta salir de la cama por la [melancolía](trastorno)
+      - Me siento vacío, creo que tengo [depresión](trastorno)
+      - No tengo motivación por culpa de la [depresión crónica](trastorno)
+      - Mi [depresión mayor](trastorno) me está afectando en el trabajo
+      - Tengo [sentimientos de inutilidad](trastorno) todos los días
+      - He perdido el apetito por la [depresión](trastorno)
+      - Mi mente está nublada por la [depresión](trastorno)
+      - Me cuesta concentrarme por esta [tristeza constante](trastorno)
+      - Mi [estado de ánimo bajo](trastorno) no mejora
+      - Estoy atrapado en un ciclo de [depresión](trastorno)
+      - Mi [apatía](trastorno) es cada vez peor
+
+  - intent: trastorno_bipolar
+    examples: |
+      - Me diagnosticaron [trastorno bipolar](trastorno) tipo 2
+      - Tengo episodios de [manía](trastorno) seguidos de depresión
+      - Mi [bipolaridad](trastorno) me causa problemas en el trabajo
+      - Estoy en tratamiento para el [trastorno bipolar](trastorno)
+      - Tengo cambios de [humor extremos](trastorno)
+      - No puedo controlar mis [estados de ánimo](trastorno)
+      - Los episodios [hipomaníacos](trastorno) me hacen tomar malas decisiones
+      - Mis emociones cambian muy rápido, tengo [trastorno bipolar](trastorno)
+      - Paso de estar muy feliz a deprimido, creo que es [bipolaridad](trastorno)
+      - He tenido un episodio de [hipomanía](trastorno)
+      - Tengo [trastorno afectivo bipolar](trastorno) diagnosticado
+      - En la fase de [manía](trastorno) gasto mucho dinero
+      - Mi [bipolaridad](trastorno) afecta mis relaciones
+      - A veces me siento invencible por mi [trastorno bipolar](trastorno)
+      - Estoy en una fase depresiva de mi [bipolaridad](trastorno)
+      - La [bipolaridad](trastorno) me impide mantener una rutina
+      - Paso días sin dormir cuando tengo [manía](trastorno)
+      - Me siento fuera de control por el [trastorno bipolar](trastorno)
+      - Tengo pensamientos acelerados por la [hipomanía](trastorno)
+      - No reconozco mis emociones por la [bipolaridad](trastorno)
+      - Mi familia no entiende mi [trastorno bipolar](trastorno)
+      - Tomo litio por mi [bipolaridad](trastorno)
+      - Estoy en una fase de euforia intensa por la [manía](trastorno)
+      - Mi terapeuta me diagnosticó [bipolaridad tipo 1](trastorno)
+      - Me cuesta mantener el equilibrio emocional por el [trastorno bipolar](trastorno)
+      - Me siento como dos personas diferentes por la [bipolaridad](trastorno)
+      - En manía me vuelvo impulsivo por el [trastorno bipolar](trastorno)
+
+  - intent: trastorno_alimenticio
+    examples: |
+      - Estoy luchando contra la [anorexia](trastorno)
+      - Tengo [bulimia](trastorno) y no puedo parar
+      - Me diagnosticaron [trastorno por atracón](trastorno)
+      - Mi relación con la [comida](trastorno) es muy complicada
+      - No puedo dejar de [purgarme](trastorno) después de comer
+      - Me obsesiona mi [peso](trastorno) y mi imagen corporal
+      - Tengo miedo de [engordar](trastorno)
+      - Cuento todas las [calorías](trastorno) que consumo
+      - Me preocupa mi [peso](trastorno) constantemente
+      - Evito comer por la [anorexia nerviosa](trastorno)
+      - Vomito después de comer, tengo [bulimia](trastorno)
+      - Como en exceso y luego me siento culpable, creo que tengo [trastorno por atracón](trastorno)
+      - Me da miedo comer frente a otros, por mi [trastorno alimenticio](trastorno)
+      - Estoy obsesionado con mi [figura](trastorno)
+      - Paso horas contando [calorías](trastorno)
+      - Mi vida gira en torno a evitar [engordar](trastorno)
+      - No puedo parar de pensar en comida, creo que tengo un [trastorno alimenticio](trastorno)
+      - Hago ejercicio excesivo por mi [imagen corporal](trastorno)
+      - Me siento mal cada vez que como por culpa de la [bulimia](trastorno)
+      - Me restrinjo mucho por miedo a [ganar peso](trastorno)
+      - Mi familia se preocupa por mi [alimentación](trastorno)
+      - Me diagnosticaron [anorexia restrictiva](trastorno)
+      - Me siento descontrolado con la comida, es un [trastorno](trastorno)
+      - No puedo dejar de hacerme daño con la comida
+      - Tengo atracones nocturnos por un [trastorno alimenticio](trastorno)
+      - Mi autoestima depende de mi [peso](trastorno)
+      - No como si no hago ejercicio, es parte de mi [trastorno](trastorno)
+      - Me escondo para purgarme, por mi [bulimia nerviosa](trastorno)
+
+  - intent: trauma_estres
+    examples: |
+      - Sufro de [TEPT](trastorno) (trastorno de estrés postraumático)
+      - Tengo [flashbacks](trastorno) de experiencias traumáticas
+      - No he superado un [trauma](trastorno) de mi infancia
+      - Fui víctima de [abuso](trastorno) y no sé cómo manejarlo
+      - Tengo [pesadillas recurrentes](trastorno) sobre un accidente
+      - Sufro de [trastorno de estrés agudo](trastorno)
+      - No puedo superar esta [experiencia traumática](trastorno)
+      - El [trauma](trastorno) afecta todas mis relaciones
+      - Revivo el accidente en mi mente, es un [trauma](trastorno)
+      - No puedo dormir por las [pesadillas](trastorno)
+      - Me diagnosticaron con [TEPT](trastorno)
+      - Evito todo lo que me recuerda al [trauma](trastorno)
+      - Estoy en terapia por un [evento traumático](trastorno)
+      - Me cuesta confiar en los demás por un [abuso](trastorno)
+      - Tengo ansiedad por el [estrés postraumático](trastorno)
+      - No puedo hablar del [trauma](trastorno) sin llorar
+      - El [abuso](trastorno) que sufrí me dejó muchas secuelas
+      - Estoy hipervigilante todo el tiempo por el [trauma](trastorno)
+      - Cualquier ruido fuerte me recuerda un [accidente](trastorno)
+      - Tengo miedo constante por el [estrés agudo](trastorno)
+      - Mi mente se bloquea cuando recuerdo el [trauma](trastorno)
+      - Me disocio cuando hablo del [evento traumático](trastorno)
+      - No puedo superar lo que viví, es un [trauma](trastorno)
+      - Tengo episodios de [revivencia](trastorno)
+      - Evito lugares donde ocurrió el [evento traumático](trastorno)
+      - Tengo recuerdos intrusivos por el [trauma](trastorno)
+      - Me cuesta relacionarme por el [TEPT](trastorno)
+      - He desarrollado [estrés crónico](trastorno) después del evento
+
+  - intent: solicitud_tecnica
+    examples: |
+      - ¿Cómo puedo practicar la [respiración diafragmática](tecnica)?
+      - Necesito ayuda con la [meditación](tecnica)
+      - ¿Me puedes guiar en un ejercicio de [relajación muscular](tecnica)?
+      - ¿Qué [técnicas de mindfulness](tecnica) me recomiendas?
+      - Quiero aprender [visualización positiva](tecnica)
+      - Necesito [técnicas para dormir](tecnica) mejor
+      - ¿Cómo hago [reestructuración cognitiva](tecnica)?
+      - ¿Me puedes enseñar [ejercicios de atención plena](tecnica)?
+      - ¿Conoces la [terapia ACT](tecnica)?
+      - ¿Puedes explicarme qué es [EMDR](tecnica)?
+      - ¿Cómo puedo practicar técnicas de [anclaje](tecnica)?
+      - ¿Qué tipo de [ejercicio](tecnica) me recomiendas para mi ansiedad?
+      - Necesito técnicas para el [manejo de ira](tecnica)
+      - ¿Cómo puedo usar este chatbot correctamente?
+      - ¿Me puedes explicar cómo navegar en esta plataforma?
+      - ¿Dónde está el botón para volver a empezar?
+      - No entiendo cómo escribirle al bot, ¿me ayudas?
+      - ¿Puedo cambiar el idioma del chatbot?
+      - ¿Qué opciones tengo para interactuar contigo?
+      - ¿Cómo activo el modo oscuro en esta interfaz?
+      - ¿Dónde puedo reiniciar la conversación?
+      - ¿Puedo hablarte por voz?
+      - ¿Puedes mostrarme un ejemplo de cómo hablarte?
+      - ¿Se guarda lo que digo aquí?
+      - ¿Qué comando uso para volver al menú principal?
+      - ¿Cómo empiezo otra vez desde el principio?
+      - ¿Cómo sé qué temas puedes tratar?
+      - ¿Me puedes dar un tutorial rápido?
+      - ¿Qué pasa si cierro la página? ¿Pierdo la conversación?
+      - ¿Puedo usar este bot desde el celular?
+      - ¿Funciona también sin internet?
+      - ¿Este sistema tiene algún error común?
+      - ¿Cómo reporto un problema técnico?
+
+  - intent: solicitud_recursos
+    examples: |
+      - ¿Dónde puedo encontrar [terapeutas](recurso) especializados?
+      - Necesito [información](recurso) sobre medicamentos
+      - ¿Conoces algún [grupo de apoyo](recurso) para mi condición?
+      - ¿Hay [libros](recurso) que me recomiendas?
+      - ¿Existe alguna [aplicación](recurso) para gestionar la ansiedad?
+      - Necesito [contactos de emergencia](recurso) para crisis
+      - ¿Hay [podcasts](recurso) sobre salud mental que recomiendas?
+      - ¿Conoces [programas gratuitos](recurso) de atención psicológica?
+      - ¿Tienes algún artículo sobre ansiedad?
+      - ¿Puedes darme videos para relajarme?
+      - Recomiéndame un libro de autoestima
+      - ¿Dónde puedo leer sobre depresión?
+      - ¿Tienes meditaciones guiadas?
+      - ¿Me puedes compartir una página con ejercicios de respiración?
+      - ¿Tienes recursos para mejorar el sueño?
+      - ¿Algún podcast sobre salud mental?
+      - ¿Conoces alguna app para controlar la ansiedad?
+      - ¿Puedo descargar materiales desde aquí?
+      - ¿Qué libros me recomiendas sobre emociones?
+      - ¿Tienes ejercicios escritos para manejar el estrés?
+      - ¿Dónde puedo encontrar guías para la meditación?
+      - ¿Tienes información confiable para familiares?
+      - ¿Qué recursos tienes para adolescentes?
+      - ¿Hay enlaces que me puedas compartir?
+      - ¿Puedo leer más sobre lo que me acabas de explicar?
+      - ¿Tienes algo para imprimir?
+      - ¿Me compartes un documento PDF sobre depresión?
+      - ¿Dónde puedo ver videos sobre respiración consciente?
+
+  - intent: seguimiento_tratamiento
+    examples: |
+      - No veo [resultados](aspecto) con mi tratamiento
+      - He notado una [mejoría](aspecto) desde que empecé la terapia
+      - No sé si debería [cambiar de medicación](aspecto)
+      - ¿Cuánto tiempo tarda en [hacer efecto](aspecto) este tratamiento?
+      - He tenido una [recaída](aspecto) después de sentirme mejor
+      - Los [efectos secundarios](aspecto) me están afectando mucho
+      - ¿Es normal tener [altibajos](aspecto) durante la recuperación?
+      - No sé si estoy [progresando](aspecto) lo suficiente
+
+  - intent: preocupacion_tratamiento
+    examples: |
+      - Me da miedo [volverme adicto](preocupacion) a la medicación
+      - Tengo miedo de que la [terapia no funcione](preocupacion) para mí
+      - Me preocupa que mis [problemas sean permanentes](preocupacion)
+      - No quiero que los demás [sepan que estoy en tratamiento](preocupacion)
+      - Temo que el [estigma](preocupacion) afecte mi vida laboral
+      - Me asusta [depender](preocupacion) de medicamentos para siempre
+      - No sé si podré [costear el tratamiento](preocupacion) a largo plazo
+      - Me preocupa que mi [familia no entienda](preocupacion) mi condición
+
+  - intent: manejo_situacional
+    examples: |
+      - ¿Cómo puedo manejar el [estrés laboral](situacion)?
+      - Me cuesta [estudiar](situacion) cuando estoy ansioso
+      - Las [reuniones sociales](situacion) me generan mucha ansiedad
+      - ¿Cómo hablar de mi condición con mi [pareja](situacion)?
+      - No sé cómo explicarle a mi [jefe](situacion) sobre mi salud mental
+      - ¿Cómo manejar una [entrevista de trabajo](situacion) con ansiedad?
+      - Me cuesta mantener [rutinas](situacion) por mi depresión
+      - No puedo [dormir](situacion) por mis preocupaciones
+      - Las [fechas importantes](situacion) me generan mucho estrés
+      - Me cuesta [concentrarme](situacion) en el trabajo

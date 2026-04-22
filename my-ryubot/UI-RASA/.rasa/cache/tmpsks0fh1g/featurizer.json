@@ -1,0 +1,80 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "agradecer": 0,
+        "back": 1,
+        "buscar_ayuda": 2,
+        "buscar_ayuda_ansiedad": 3,
+        "definicion_salud_mental": 4,
+        "despedida": 5,
+        "diagnosticos_etiquetas": 6,
+        "diferencia_salud_trastorno": 7,
+        "factores_desencadenantes": 8,
+        "fuera_de_alcance": 9,
+        "impacto_crisis": 10,
+        "mito_inteligencia": 11,
+        "mito_violencia": 12,
+        "necesidades_post_diagnostico": 13,
+        "nlu_fallback": 14,
+        "out_of_scope": 15,
+        "preguntar_sobre_ansiedad": 16,
+        "presentacion": 17,
+        "probabilidad_trastorno": 18,
+        "reportar_sintomas_ansiedad": 19,
+        "restart": 20,
+        "saludo": 21,
+        "session_start": 22
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_agradecer": 13,
+        "utter_buscar_ayuda": 14,
+        "utter_buscar_profesional": 15,
+        "utter_crisis_ansiedad": 16,
+        "utter_default": 17,
+        "utter_definicion_salud_mental": 18,
+        "utter_despedida": 19,
+        "utter_diagnosticos_etiquetas": 20,
+        "utter_diferencia_salud_trastorno": 21,
+        "utter_ejercicios_ansiedad": 22,
+        "utter_factores_desencadenantes": 23,
+        "utter_fuera_de_alcance": 24,
+        "utter_impacto_crisis": 25,
+        "utter_info_ansiedad": 26,
+        "utter_mito_inteligencia": 27,
+        "utter_mito_violencia": 28,
+        "utter_necesidades_post_diagnostico": 29,
+        "utter_presentacion": 30,
+        "utter_probabilidad_trastorno": 31,
+        "utter_saludo": 32,
+        "utter_sintomas_ansiedad": 33,
+        "utter_tratamientos_ansiedad": 34
+      },
+      "entities": {
+        "nivel_ansiedad": 0
+      },
+      "slots": {
+        "nivel_ansiedad_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

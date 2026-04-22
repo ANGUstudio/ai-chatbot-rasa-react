@@ -1,0 +1,44 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"diagnosticos_etiquetas\"}}]": "utter_diagnosticos_etiquetas",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"diagnosticos_etiquetas\"}}, {\"prev_action\": {\"action_name\": \"utter_diagnosticos_etiquetas\"}, \"user\": {\"intent\": \"diagnosticos_etiquetas\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"probabilidad_trastorno\"}}]": "utter_probabilidad_trastorno",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"probabilidad_trastorno\"}}, {\"prev_action\": {\"action_name\": \"utter_probabilidad_trastorno\"}, \"user\": {\"intent\": \"probabilidad_trastorno\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mito_violencia\"}}]": "utter_mito_violencia",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mito_violencia\"}}, {\"prev_action\": {\"action_name\": \"utter_mito_violencia\"}, \"user\": {\"intent\": \"mito_violencia\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"impacto_crisis\"}}]": "utter_impacto_crisis",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"impacto_crisis\"}}, {\"prev_action\": {\"action_name\": \"utter_impacto_crisis\"}, \"user\": {\"intent\": \"impacto_crisis\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saludo\"}}]": "utter_saludo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"saludo\"}}, {\"prev_action\": {\"action_name\": \"utter_saludo\"}, \"user\": {\"intent\": \"saludo\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}]": "utter_despedida",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"despedida\"}}, {\"prev_action\": {\"action_name\": \"utter_despedida\"}, \"user\": {\"intent\": \"despedida\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"definicion_salud_mental\"}}]": "utter_definicion_salud_mental",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"definicion_salud_mental\"}}, {\"prev_action\": {\"action_name\": \"utter_definicion_salud_mental\"}, \"user\": {\"intent\": \"definicion_salud_mental\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"factores_desencadenantes\"}}]": "utter_factores_desencadenantes",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"factores_desencadenantes\"}}, {\"prev_action\": {\"action_name\": \"utter_factores_desencadenantes\"}, \"user\": {\"intent\": \"factores_desencadenantes\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"agradecer\"}}]": "utter_agradecer",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"agradecer\"}}, {\"prev_action\": {\"action_name\": \"utter_agradecer\"}, \"user\": {\"intent\": \"agradecer\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buscar_ayuda\"}}]": "utter_buscar_ayuda",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buscar_ayuda\"}}, {\"prev_action\": {\"action_name\": \"utter_buscar_ayuda\"}, \"user\": {\"intent\": \"buscar_ayuda\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mito_inteligencia\"}}]": "utter_mito_inteligencia",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"mito_inteligencia\"}}, {\"prev_action\": {\"action_name\": \"utter_mito_inteligencia\"}, \"user\": {\"intent\": \"mito_inteligencia\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fuera_de_alcance\"}}]": "utter_fuera_de_alcance",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fuera_de_alcance\"}}, {\"prev_action\": {\"action_name\": \"utter_fuera_de_alcance\"}, \"user\": {\"intent\": \"fuera_de_alcance\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"necesidades_post_diagnostico\"}}]": "utter_necesidades_post_diagnostico",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"necesidades_post_diagnostico\"}}, {\"prev_action\": {\"action_name\": \"utter_necesidades_post_diagnostico\"}, \"user\": {\"intent\": \"necesidades_post_diagnostico\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"diferencia_salud_trastorno\"}}]": "utter_diferencia_salud_trastorno",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"diferencia_salud_trastorno\"}}, {\"prev_action\": {\"action_name\": \"utter_diferencia_salud_trastorno\"}, \"user\": {\"intent\": \"diferencia_salud_trastorno\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "handling active loops and forms - symptom_assessment_form - action_listen",
+      "predicting default action with intent restart",
+      "handling active loops and forms - symptom_assessment_form",
+      "predicting default action with intent back"
+    ]
+  }
+}

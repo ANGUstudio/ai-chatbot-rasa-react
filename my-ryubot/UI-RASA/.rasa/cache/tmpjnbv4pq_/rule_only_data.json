@@ -1,0 +1,6 @@
+{
+  "rule_only_slots": [
+    "nivel_ansiedad"
+  ],
+  "rule_only_loops": []
+}

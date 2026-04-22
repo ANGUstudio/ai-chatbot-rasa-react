@@ -1,0 +1,355 @@
+version: "3.1"
+
+intents:
+  - sintomas_emocionales
+  - sintomas_cognitivos
+  - sintomas_fisicos
+  - sintomas_conductuales
+  - crisis
+  - inform
+  - afirmar
+  - negar
+  - trastorno_ansiedad
+  - trastorno_depresion
+  - trastorno_bipolar
+  - trastorno_alimenticio
+  - trauma_estres
+  - solicitud_tecnica
+  - solicitud_recursos
+  - seguimiento_tratamiento
+  - preocupacion_tratamiento
+  - manejo_situacional
+
+entities:
+  - sintoma
+  - intensidad
+  - tipo_crisis
+  - trastorno
+  - tecnica
+  - recurso
+  - aspecto
+  - preocupacion
+  - situacion
+  - symptom
+  - symptom_type
+  - duration
+
+slots:
+  sintoma:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sintoma
+
+  intensidad_emocional:
+    type: categorical
+    values:
+      - leve
+      - moderado
+      - severo
+    mappings:
+      - type: from_entity
+        entity: intensidad
+
+  intensidad_cognitiva:
+    type: categorical
+    values:
+      - leve
+      - moderado
+      - severo
+    mappings:
+      - type: from_entity
+        entity: intensidad
+
+  intensidad_fisica:
+    type: categorical
+    values:
+      - leve
+      - moderado
+      - severo
+    mappings:
+      - type: from_entity
+        entity: intensidad
+
+  intensidad_conductual:
+    type: categorical
+    values:
+      - leve
+      - moderado
+      - severo
+    mappings:
+      - type: from_entity
+        entity: intensidad
+
+  tipo_crisis:
+    type: categorical
+    values:
+      - panico
+      - suicidio
+    mappings:
+      - type: from_entity
+        entity: tipo_crisis
+
+  trastorno:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: trastorno
+
+  symptom:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: symptom
+
+  symptom_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: symptom_type
+
+  duration:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: duration
+
+  symptom_severity:
+    type: text
+    mappings:
+      - type: custom
+
+  has_emotional_symptoms:
+    type: bool
+    mappings:
+      - type: custom
+
+  has_cognitive_symptoms:
+    type: bool
+    mappings:
+      - type: custom
+
+  has_physical_symptoms:
+    type: bool
+    mappings:
+      - type: custom
+
+  has_behavioral_symptoms:
+    type: bool
+    mappings:
+      - type: custom
+
+responses:
+  utter_reconocer_sintomas_emocionales:
+    - text: "Gracias por abrirte conmigo. Entiendo que estás experimentando sentimientos de {sintoma}, y es completamente válido sentirse así. ¿Podrías decirme qué tan intensos son para ti: leve, moderado o severo?"
+
+  utter_reconocer_sintomas_cognitivos:
+    - text: "Veo que estás lidiando con pensamientos como '{sintoma}'. A veces nuestra mente puede volverse muy ruidosa. ¿Cómo calificarías la intensidad de estos pensamientos: leve, moderado o severo?"
+
+  utter_reconocer_sintomas_fisicos:
+    - text: "Gracias por compartirlo. Los síntomas físicos como '{sintoma}' también son importantes y no deben ignorarse. ¿Qué tan fuerte lo sientes: leve, moderado o severo?"
+
+  utter_reconocer_sintomas_conductuales:
+    - text: "Observo que estás atravesando cambios en tu comportamiento, como '{sintoma}' pueden ser señales de algo más profundo. ¿Qué tanto impacto crees que están teniendo en tu día a día?, leve, moderado o severo?"
+
+  utter_respuesta_crisis:
+    - text: "Estoy aquí contigo, y me importa tu bienestar. Lo que estás viviendo es muy importante. ¿Dirías que lo que sientes se parece más a un ataque de pánico o a pensamientos suicidas?"
+      buttons:
+        - title: "Ataque de pánico"
+          payload: /inform
+          entities:
+            tipo_crisis: "panico"
+        - title: "Pensamientos suicidas"
+          payload: /inform
+          entities:
+            tipo_crisis: "suicidio"
+
+  utter_manejo_panico:
+    - text: "Estás pasando por un momento muy difícil, y estás haciendo lo correcto al buscar ayuda. Vamos a respirar juntos: inhala por 4 segundos, mantén el aire por 2, exhala lentamente por 6. Repítelo unas 5 veces. Recuerda que lo que estás sintiendo pasará."
+
+  utter_contacto_emergencia:
+    - text: "No estás solo. Si estás en una crisis, busca ayuda de inmediato. En Colombia, puedes comunicarte con la Línea 106 en Bogotá o marcar el 123 desde cualquier lugar del país. También puedes acudir al centro de salud más cercano."
+
+  utter_recomendacion_emocional:
+    - condition:
+        - type: slot
+          name: intensidad_emocional
+          value: leve
+      text: "Cuando sentimos tristeza o ansiedad leve, puede ayudar mucho practicar mindfulness unos minutos al día, escribir en un diario o hacer una caminata suave. Son pequeños pasos que pueden traer claridad y alivio."
+    - condition:
+        - type: slot
+          name: intensidad_emocional
+          value: moderado
+      text: "Es completamente válido sentirse así. Para emociones moderadas, considera hablar con un amigo de confianza y practicar técnicas de respiración regularmente. También puede ser útil establecer una rutina de ejercicio suave."
+    - condition:
+        - type: slot
+          name: intensidad_emocional
+          value: severo
+      text:  "Gracias por confiar en mí. Cuando las emociones son tan intensas, te recomendaría considerar hablar con un profesional de salud mental. Mientras tanto, practica técnicas de reducción de estrés como la respiración profunda y asegúrate de mantener una rutina saludable."
+
+  utter_recomendacion_cognitiva:
+    - condition:
+        - type: slot
+          name: intensidad_cognitiva
+          value: leve
+      text: "Es normal que la mente tenga pensamientos difíciles. Puedes probar cuestionar suavemente esos pensamientos: ¿son del todo ciertos? ¿hay otra forma de ver la situación? También ayuda practicar mindfulness o meditación breve."
+    - condition:
+        - type: slot
+          name: intensidad_cognitiva
+          value: moderado
+      text: "Tus pensamientos tienen peso, pero también puedes empezar a observarlos sin juzgar. Escribirlos, y luego responderlos con compasión, puede ayudarte a recuperar claridad poco a poco."
+    - condition:
+        - type: slot
+          name: intensidad_cognitiva
+          value: severo
+      text: "Estos pensamientos pueden ser abrumadores. Sería muy valioso que hables con un profesional que pueda apoyarte. No tienes que enfrentar esto solo. Mientras tanto, intenta escribir cómo te sientes, sin censura, solo para desahogarte."
+
+  utter_recomendacion_fisica:
+    - condition:
+        - type: slot
+          name: intensidad_fisica
+          value: leve
+      text: "Para síntomas físicos leves, puedes intentar relajarte con respiraciones profundas, estiramientos suaves y mantener rutinas de sueño, comida y descanso. Cuidar el cuerpo también cuida la mente."
+    - condition:
+        - type: slot
+          name: intensidad_fisica
+          value: moderado
+      text: "Cuando el cuerpo empieza a reflejar tensión, es importante escuchar lo que necesita. Intenta moverte un poco cada día, tomar pausas, y hablar con alguien si lo necesitas. El autocuidado no es un lujo, es una necesidad."
+    - condition:
+        - type: slot
+          name: intensidad_fisica
+          value: severo
+      text: "Si los síntomas físicos son intensos, sería recomendable consultar a un profesional de salud. A veces el cuerpo pide ayuda cuando no podemos decirlo en palabras. No ignores lo que sientes. Tu bienestar importa."
+
+  utter_recomendacion_conductual:
+    - condition:
+        - type: slot
+          name: intensidad_conductual
+          value: leve
+      text: "Puede que no tengas tanta energía, y eso está bien. Intenta hacer solo una pequeña cosa que solías disfrutar, sin exigencias. Lo más importante es que des un paso a la vez, sin juzgarte."
+    - condition:
+        - type: slot
+          name: intensidad_conductual
+          value: moderado
+      text: "Cuando nuestros hábitos cambian, puede ser señal de que necesitamos apoyo. Establecer rutinas suaves, reconectar con alguien o incluso escribir lo que estás sintiendo puede ayudarte a reconectar contigo mismo."
+    - condition:
+        - type: slot
+          name: intensidad_conductual
+          value: severo
+      text: "Los cambios en tu comportamiento son señales importantes. Te animo a buscar ayuda profesional. Mientras tanto, intenta darte un respiro, hablar con alguien de confianza, o escribir lo que estás sintiendo. Tu historia importa."
+
+  utter_disclaimer:
+    - text: "Soy un asistente virtual, y aunque estoy aquí para acompañarte, no reemplazo la ayuda de un profesional de salud mental. Si estás en una crisis o necesitas apoyo urgente, busca ayuda profesional o llama a una línea de atención."
+
+  utter_guia_ansiedad:
+    - text: "La ansiedad puede manifestarse de muchas formas, desde preocupación constante hasta síntomas físicos como tensión muscular o palpitaciones. Escuchar a tu cuerpo y reconocer los primeros signos es el primer paso para manejarla."
+
+  utter_guia_depresion:
+    - text: "La depresión es más que tristeza pasajera; afecta cómo te sientes, piensas y manejas las actividades diarias. Recuerda que no es una debilidad y que existen tratamientos efectivos que pueden ayudarte."
+
+  utter_guia_bipolar:
+    - text: "El trastorno bipolar implica cambios significativos en el estado de ánimo, energía y capacidad de funcionamiento. Mantener rutinas consistentes y seguir el tratamiento recomendado son clave para su manejo."
+
+  utter_guia_alimenticio:
+    - text: "Los trastornos alimenticios son condiciones serias que requieren atención profesional. Tienen componentes físicos, emocionales y sociales, por lo que un enfoque integral es fundamental para la recuperación."
+
+  utter_guia_trauma:
+    - text: "El trauma puede afectar profundamente cómo nos relacionamos con el mundo. Trabajar con profesionales especializados en trauma puede ayudarte a procesar las experiencias difíciles y desarrollar herramientas de afrontamiento."
+
+  utter_establecer_rutina:
+    - text: "Establecer rutinas predecibles puede ayudar a manejar la ansiedad. Intenta mantener horarios regulares para dormir, comer y actividades importantes. Incluso pequeñas consistencias pueden crear una sensación de seguridad."
+
+  utter_autocuidado:
+    - text: "El autocuidado no es un lujo sino una necesidad. Incluye actividades que nutren tu bienestar físico, mental y emocional. Puede ser tan simple como dar un paseo, escuchar música que te calme, o practicar respiración consciente."
+
+  utter_higiene_sueno:
+    - text: "El sueño de calidad es crucial para la estabilidad del estado de ánimo. Intenta acostarte y levantarte a la misma hora, evita cafeína y pantallas antes de dormir, y crea un ambiente tranquilo y cómodo para descansar."
+
+  utter_apoyo_social:
+    - text: "Contar con personas que te apoyen puede hacer una gran diferencia en tu recuperación. No tengas miedo de compartir lo que estás viviendo con aquellos en quienes confías, o considerar grupos de apoyo donde puedas conectar con otros que comprenden tu experiencia."
+
+  utter_tecnica_mindfulness:
+    - text: "La atención plena o mindfulness consiste en prestar atención al momento presente, sin juzgar. Intenta este ejercicio: observa 5 cosas que puedes ver, 4 que puedes tocar, 3 que puedes oír, 2 que puedes oler y 1 que puedes saborear."
+
+  utter_tecnica_respiracion:
+    - text: "Cuando sientas ansiedad, prueba esta técnica de respiración: inhala contando hasta 4, mantén el aire por 2 segundos, y exhala lentamente contando hasta 6. Repite 5-10 veces, enfocándote completamente en tu respiración."
+
+  utter_tecnica_reestructuracion:
+    - text: "Cuando notes pensamientos negativos, practica cuestionarlos: ¿Es un pensamiento o un hecho comprobado? ¿Hay evidencia que lo contradiga? ¿Cómo lo vería alguien que te quiere? Busca perspectivas más equilibradas."
+
+  utter_recordatorio_profesional:
+    - text: "Recuerda que soy un asistente virtual y no reemplazo la orientación de un profesional de salud mental. Si estos síntomas persisten o interfieren significativamente con tu vida, te animo a buscar ayuda profesional."
+
+  utter_manejo_recaida:
+    - text: "Las recaídas son parte del proceso de recuperación y no significan fracaso. Reconocer los primeros signos, aplicar las herramientas que has aprendido y comunicarte con tu equipo de apoyo puede ayudarte a manejar estos momentos difíciles."
+
+  utter_seguimiento_tratamiento:
+    - text: "Mantener la consistencia en tu tratamiento es fundamental para ver resultados. Celebra cada pequeño progreso y recuerda que la recuperación no siempre es lineal. Si notas cambios en cómo te sientes, compártelos con tu profesional de salud."
+
+  utter_manejo_preocupacion:
+    - text: "Es normal tener preocupaciones sobre el tratamiento. Compartir estas inquietudes con tu profesional de salud puede ayudar a aclarar dudas y, si es necesario, explorar alternativas que te resulten más cómodas."
+
+  utter_consejo_situacional:
+    - text: "Enfrentar situaciones difíciles requiere preparación. Antes del evento, practica técnicas de relajación, visualiza cómo manejarás desafíos potenciales, y considera tener un plan para tomar pequeños descansos si lo necesitas."
+
+  utter_manejo_crisis_leve:
+    - text: "Durante una crisis leve, enfócate primero en tu respiración. Inhala profundamente, exhala lentamente. Busca un espacio tranquilo si es posible. Recuerda que esta sensación pasará. Si tienes una técnica que te ha funcionado antes, es buen momento para usarla."
+
+  utter_agradecer:
+    - text: "Gracias por compartir esto conmigo. Hablar sobre nuestras experiencias puede ser un paso importante hacia el bienestar. Estoy aquí para escucharte y apoyarte en lo que necesites."
+
+  utter_goodbye:
+    - text: "Fue un gusto poder ayudarte. Recuerda que estoy aquí si necesitas hablar nuevamente. Cuídate mucho y que tengas un buen día."
+
+  utter_saludo:
+    - text: "¡Hola! Soy un asistente virtual para apoyarte en temas de salud mental. Puedo proporcionarte información, estrategias de afrontamiento o simplemente escucharte. ¿Cómo puedo ayudarte hoy?"
+
+  utter_despedida:
+    - text: "Gracias por compartir conmigo. Espero haberte sido útil. Recuerda que estoy aquí para apoyarte cuando lo necesites. ¡Cuídate mucho!"
+
+  utter_presentacion:
+    - text: "Soy un asistente virtual especializado en apoyo para la salud mental. Estoy diseñado para ofrecer información, estrategias de afrontamiento y acompañamiento, aunque no reemplazo la ayuda profesional. ¿En qué puedo ayudarte?"
+
+  utter_severe_depression_advice:
+    - text: "Basado en lo que me cuentas, parece que estás pasando por un momento muy difícil. Te recomendaría buscar apoyo profesional lo antes posible. Mientras tanto, aquí hay algunas estrategias que podrían ayudarte."
+
+  utter_moderate_depression_advice:
+    - text: "Los síntomas que describes sugieren que podrías beneficiarte de apoyo profesional. Un terapeuta podría ayudarte a entender mejor lo que estás experimentando y desarrollar estrategias efectivas."
+
+  utter_mild_depression_advice:
+    - text: "Por lo que me cuentas, estás experimentando algunos síntomas que, aunque no parecen severos, merecen atención. Algunas técnicas de autocuidado podrían ayudarte a sentirte mejor."
+
+  utter_treatment_options:
+    - text: "Existen diferentes opciones de tratamiento que han demostrado ser efectivas. La terapia, especialmente la cognitivo-conductual, puede ayudarte a identificar patrones de pensamiento negativos y desarrollar formas más saludables de responder a ellos. Algunos casos también pueden beneficiarse de medicación. Un profesional puede ayudarte a determinar qué es lo más adecuado para ti."
+
+  utter_self_care_tips:
+    - text: "Además del apoyo profesional, hay cosas que puedes hacer por ti mismo: mantener una rutina de sueño regular, hacer ejercicio moderado, alimentarte bien, practicar técnicas de relajación como la respiración profunda o la meditación, y conectar con personas que te apoyen."
+
+  utter_recomendar_recursos:
+    - text: "Entiendo que buscas {recurso}. Aunque no puedo recomendarte servicios específicos, te sugiero buscar en directorios de profesionales certificados a través de asociaciones de psicólogos o psiquiatras de tu país. También puedes consultar con tu seguro médico sobre cobertura para salud mental. Las universidades locales a veces ofrecen servicios a precios accesibles. ¿Necesitas más orientación sobre cómo encontrar estos recursos?"
+
+
+actions:
+  - validate_intensidad_emocional
+  - validate_intensidad_cognitiva
+  - validate_intensidad_fisica
+  - validate_intensidad_conductual
+  - validate_tipo_crisis
+  - action_protocolo_suicidio
+  - action_assess_symptom_severity
+  - action_recommend_next_steps
+  - action_reset_symptom_slots
+  - action_assess_symptom_severity2
+  - action_plan_recuperacion
+  - action_tecnica_grounding
+  - action_recomendar_ejercicio
+  - action_manejo_ira_pasos
+
+session_config:
+  session_expiration_time: 60  # en minutos
+  carry_over_slots_to_new_session: true
+
+# Configuración para CALM
+nlg:
+  type: rephrase
+  rephrase_all: true

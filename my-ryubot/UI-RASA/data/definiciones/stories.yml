@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+- story: pregunta sobre salud mental
+  steps:
+  - intent: pregunta_salud_mental
+  - action: utter_salud_mental
+
+- story: pregunta directa sobre salud mental
+  steps:
+  - intent: pregunta_salud_mental
+  - action: utter_salud_mental
+
+- story: pregunta sobre ansiedad
+  steps:
+  - intent: pregunta_ansiedad
+  - action: utter_ansiedad
+
+- story: pregunta sobre depresión
+  steps:
+  - intent: pregunta_depresion
+  - action: utter_depresion
+
+- story: pregunta sobre estrés
+  steps:
+  - intent: pregunta_estres
+  - action: utter_estres
+
+- story: pregunta sobre terapia
+  steps:
+  - intent: pregunta_terapia
+  - action: utter_terapia
+
+- story: pregunta sobre autoayuda
+  steps:
+  - intent: pregunta_autoayuda
+  - action: utter_autoayuda
+
+- story: pregunta sobre bienestar
+  steps:
+  - intent: pregunta_bienestar
+  - action: utter_bienestar
+

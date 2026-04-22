@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+  - rule: Saludar siempre
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+
+  - rule: Despedirse siempre
+    steps:
+      - intent: despedida
+      - action: utter_despedida
+
+  - rule: Agradecer siempre
+    steps:
+      - intent: agradecer
+      - action: utter_agradecer

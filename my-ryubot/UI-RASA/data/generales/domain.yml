@@ -1,0 +1,27 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - agradecer
+  - presentacion
+
+responses:
+  utter_saludo:
+    - text: "¡Hola! Soy tu asistente virtual de salud mental. ¿En qué puedo ayudarte hoy?"
+    - text: "Hola, estoy aquí para acompañarte. ¿Cómo puedo ayudarte con tu bienestar emocional?"
+    - text: "¡Bienvenido/a! Estoy aquí para brindarte apoyo e información sobre salud mental. ¿En qué te puedo ayudar?"
+
+  utter_despedida:
+    - text: "Hasta pronto. Recuerda que estaré aquí cuando me necesites."
+    - text: "Cuídate mucho. Vuelve cuando quieras conversar o necesites apoyo."
+    - text: "Adiós. No dudes en contactarme si necesitas hablar o tienes alguna duda sobre salud mental."
+
+  utter_agradecer:
+    - text: "No hay de qué. Estoy aquí para ayudarte."
+    - text: "Es un placer poder apoyarte en tu bienestar emocional."
+    - text: "De nada. Mi propósito es brindarte información y apoyo."
+
+  utter_presentacion:
+    - text: "Soy Ryubot un asistente virtual especializado en salud mental. Puedo brindarte información sobre ansiedad, depresión y otros temas relacionados con el bienestar emocional, además de ofrecerte técnicas y ejercicios que pueden ayudarte. Recuerda que no reemplazo a un profesional de la salud mental, pero estoy aquí para apoyarte."
+    - text: "Soy Ryubot estoy diseñado para ofrecer apoyo en temas de salud mental. Puedo proporcionarte información, sugerirte técnicas de manejo emocional y orientarte sobre cómo buscar ayuda profesional si la necesitas. Aunque no soy un terapeuta, estoy aquí para escucharte y ayudarte."

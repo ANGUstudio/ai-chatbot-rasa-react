@@ -1,0 +1,153 @@
+version: "3.1"
+
+nlu:
+
+- intent: pregunta_salud_mental
+  examples: |
+    - ¿qué es la salud mental?
+    - explícame qué significa salud mental
+    - definición de salud mental
+    - quiero saber sobre salud mental
+    - ¿puedes hablarme de la salud mental?
+    - ¿cómo se define la salud mental?
+    - concepto de salud mental
+    - ¿qué entendemos por salud mental?
+    - información sobre salud mental
+    - ¿podrías decirme qué es la salud mental?
+    - define salud mental por favor
+    - ¿qué entienden los expertos por salud mental?
+    - quiero conocer la definición de salud mental
+    - salud mental ¿a qué se refiere?
+    - ¿cómo se interpreta la salud mental?
+    - ¿cuál es el significado de salud mental?
+    - ¿qué representa la salud mental?
+    - ¿qué dice la OMS sobre salud mental?
+    - ¿qué abarca la salud mental?
+
+- intent: pregunta_ansiedad
+  examples: |
+    - ¿qué es la ansiedad?
+    - explícame qué es la ansiedad
+    - definición de ansiedad
+    - ¿cómo sé si tengo ansiedad?
+    - síntomas de ansiedad
+    - ¿puedes hablarme sobre la ansiedad?
+    - sufro de ansiedad
+    - me siento ansioso
+    - tengo ataques de ansiedad
+    - ¿me puedes definir ansiedad?
+    - ¿qué significa ansiedad exactamente?
+    - necesito saber qué es la ansiedad
+    - ansiedad, ¿cómo se explica?
+    - ¿qué tipo de trastorno es la ansiedad?
+    - ¿cómo describen los psicólogos la ansiedad?
+    - ¿cuál es el concepto de ansiedad?
+    - ansiedad ¿qué quiere decir?
+    - ¿por qué se le llama ansiedad?
+    - ¿cómo definirías ansiedad?
+
+- intent: pregunta_depresion
+  examples: |
+    - ¿qué es la depresión?
+    - explícame qué es la depresión
+    - definición de depresión
+    - ¿cómo saber si estoy deprimido?
+    - síntomas de depresión
+    - me siento deprimido
+    - creo que tengo depresión
+    - ¿puedes hablarme sobre la depresión?
+    - ¿puedes definir depresión?
+    - ¿qué quiere decir depresión?
+    - ¿cómo se describe la depresión?
+    - depresión según psicología
+    - ¿qué entiendes por depresión?
+    - ¿cuál es el concepto de la depresión?
+    - ¿por qué se llama depresión?
+    - ¿cómo identificar la depresión?
+    - ¿qué significa estar deprimido?
+    - ¿cuáles son las bases de la depresión?
+
+- intent: pregunta_estres
+  examples: |
+    - ¿qué es el estrés?
+    - definición de estrés
+    - explícame el estrés
+    - ¿cómo manejar el estrés?
+    - síntomas de estrés
+    - me siento estresado
+    - ¿puedes hablarme sobre el estrés?
+    - consejos para el estrés
+    - ¿qué se entiende por estrés?
+    - ¿cómo se define el estrés en salud mental?
+    - estrés, ¿qué significa eso?
+    - ¿puedes explicarme el término estrés?
+    - ¿cuál es la definición exacta de estrés?
+    - ¿por qué sentimos estrés?
+    - ¿qué provoca el estrés?
+    - ¿qué conlleva el estrés?
+    - ¿cómo se explica el estrés?
+    - ¿a qué se refiere el estrés psicológico?
+
+- intent: pregunta_terapia
+  examples: |
+    - ¿qué es la terapia?
+    - explícame la terapia psicológica
+    - tipos de terapia
+    - ¿cómo funciona la terapia?
+    - ¿debería ir a terapia?
+    - terapia psicológica
+    - psicoterapia
+    - ¿qué hace un terapeuta?
+    - ¿qué quiere decir terapia psicológica?
+    - ¿cómo se entiende la palabra terapia?
+    - ¿qué es una terapia mental?
+    - ¿qué implica ir a terapia?
+    - define psicoterapia por favor
+    - ¿cuál es el rol de una terapia?
+    - ¿en qué consiste la terapia?
+    - ¿cómo funciona una sesión de terapia?
+    - ¿para qué sirve la terapia psicológica?
+    - ¿terapia es lo mismo que hablar con alguien?
+
+- intent: pregunta_autoayuda
+  examples: |
+    - consejos para mejorar mi salud mental
+    - técnicas de autoayuda
+    - ¿cómo puedo ayudarme a mí mismo?
+    - estrategias para sentirme mejor
+    - ejercicios para la mente
+    - ¿qué puedo hacer para mejorar mi bienestar?
+    - prácticas para la salud mental
+    - rutinas saludables
+    - ¿qué significa autoayuda?
+    - ¿me puedes definir autoayuda?
+    - ¿qué es el concepto de autoayuda?
+    - ¿a qué se refiere la autoayuda?
+    - ¿qué es un recurso de autoayuda?
+    - ¿autoayuda es lo mismo que motivación?
+    - ¿qué se considera autoayuda?
+    - ¿cómo se define el término autoayuda?
+    - ¿la autoayuda sirve?
+    - ¿qué implica la autoayuda?
+
+- intent: pregunta_bienestar
+  examples: |
+    - ¿qué es el bienestar mental?
+    - explícame el bienestar psicológico
+    - ¿cómo lograr bienestar?
+    - definición de bienestar
+    - estado de bienestar
+    - ¿puedes hablarme del bienestar emocional?
+    - bienestar psicológico
+    - ¿qué entienden por bienestar?
+    - define bienestar emocional
+    - ¿cuál es el significado de bienestar mental?
+    - ¿qué representa el bienestar?
+    - ¿cómo describen el bienestar psicológico?
+    - ¿qué se incluye en el concepto de bienestar?
+    - ¿cómo se mide el bienestar emocional?
+    - ¿por qué es importante el bienestar?
+    - ¿cómo se entiende el bienestar en salud mental?
+    - ¿qué engloba el bienestar psicológico?
+
+

@@ -1,0 +1,20 @@
+{
+  "name": "ryubot-system",
+  "version": "1.0.0",
+  "description": "Sistema completo de chatbot Rasa + React",
+  "main": "index.js",
+  "scripts": {
+    "train-rasa": "cd Z:\\VERSION-BOT\\my-ryubot\\UI-RASA && rasa train --domain data",
+    "start-actions": "cd Z:\\VERSION-BOT\\my-ryubot\\UI-RASA && rasa run actions",
+    "start-rasa": "cd Z:\\VERSION-BOT\\my-ryubot\\UI-RASA && rasa run --enable-api --cors \"*\"",
+    "start-ui": "cd Z:\\VERSION-BOT\\templates\\my-auth-app && npm run dev",
+    "start-all": "concurrently \"npm:start-actions\" \"npm:start-rasa\" \"npm:start-ui\"",
+    "full-start": "npm run train-rasa && npm run start-all"
+  },
+  "keywords": ["chatbot", "rasa", "react"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

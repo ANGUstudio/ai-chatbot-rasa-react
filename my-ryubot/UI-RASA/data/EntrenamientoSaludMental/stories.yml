@@ -1,0 +1,264 @@
+version: "3.1"
+
+stories:
+# Historias para síntomas
+- story: Historia sobre síntomas emocionales - leve
+  steps:
+  - intent: sintomas_emocionales
+    entities:
+    - sintoma: "triste"
+  - action: utter_reconocer_sintomas_emocionales
+  - intent: inform
+    entities:
+    - intensidad: "leve"
+  - slot_was_set:
+    - intensidad_emocional: "leve"
+  - action: utter_recomendacion_emocional
+
+- story: Historia sobre síntomas emocionales - moderado
+  steps:
+  - intent: sintomas_emocionales
+    entities:
+    - sintoma: "ansioso"
+  - action: utter_reconocer_sintomas_emocionales
+  - intent: inform
+    entities:
+    - intensidad: "moderado"
+  - slot_was_set:
+    - intensidad_emocional: "moderado"
+  - action: utter_recomendacion_emocional
+
+- story: Historia sobre síntomas emocionales - severo con crisis
+  steps:
+  - intent: sintomas_emocionales
+    entities:
+    - sintoma: "desesperado"
+  - action: utter_reconocer_sintomas_emocionales
+  - intent: inform
+    entities:
+    - intensidad: "severo"
+  - slot_was_set:
+    - intensidad_emocional: "severo"
+  - action: utter_respuesta_crisis
+  - intent: inform
+    entities:
+    - tipo_crisis: "panico"
+  - slot_was_set:
+    - tipo_crisis: "panico"
+  - action: utter_manejo_panico
+  - action: utter_disclaimer
+
+- story: Historia sobre síntomas cognitivos
+  steps:
+  - intent: sintomas_cognitivos
+    entities:
+    - sintoma: "concentrarme"
+  - action: utter_reconocer_sintomas_cognitivos
+  - intent: inform
+    entities:
+    - intensidad: "moderado"
+  - slot_was_set:
+    - intensidad_cognitiva: "moderado"
+  - action: utter_recomendacion_cognitiva
+
+- story: Historia sobre síntomas físicos
+  steps:
+  - intent: sintomas_fisicos
+    entities:
+    - sintoma: "cansado"
+  - action: utter_reconocer_sintomas_fisicos
+  - intent: inform
+    entities:
+    - intensidad: "severo"
+  - slot_was_set:
+    - intensidad_fisica: "severo"
+  - action: utter_recomendacion_fisica
+  - action: utter_disclaimer
+
+- story: Historia sobre síntomas conductuales
+  steps:
+  - intent: sintomas_conductuales
+    entities:
+    - sintoma: "abandonado actividades"
+  - action: utter_reconocer_sintomas_conductuales
+  - intent: inform
+    entities:
+    - intensidad: "moderado"
+  - slot_was_set:
+    - intensidad_conductual: "moderado"
+  - action: utter_recomendacion_conductual
+
+- story: Historia directa de crisis - pánico
+  steps:
+  - intent: crisis
+  - action: utter_respuesta_crisis
+  - intent: inform
+    entities:
+    - tipo_crisis: "panico"
+  - slot_was_set:
+    - tipo_crisis: "panico"
+  - action: utter_manejo_panico
+  - action: utter_disclaimer
+
+- story: Historia directa de crisis - suicidio
+  steps:
+  - intent: crisis
+  - action: utter_respuesta_crisis
+  - intent: inform
+    entities:
+    - tipo_crisis: "suicidio"
+  - slot_was_set:
+    - tipo_crisis: "suicidio"
+  - action: action_protocolo_suicidio
+  - action: utter_contacto_emergencia
+  - action: utter_disclaimer
+
+# Historias para trastornos mentales
+- story: path trastorno ansiedad
+  steps:
+  - intent: trastorno_ansiedad
+    entities:
+      - trastorno: "ansiedad generalizada"
+  - action: utter_guia_ansiedad
+  - action: utter_recordatorio_profesional
+  - action: utter_establecer_rutina
+
+- story: path trastorno depresión
+  steps:
+  - intent: trastorno_depresion
+    entities:
+      - trastorno: "depresión"
+  - action: utter_guia_depresion
+  - action: utter_autocuidado
+  - action: utter_recordatorio_profesional
+
+- story: path trastorno bipolar
+  steps:
+  - intent: trastorno_bipolar
+    entities:
+      - trastorno: "trastorno bipolar"
+  - action: utter_guia_bipolar
+  - action: utter_higiene_sueno
+  - action: utter_recordatorio_profesional
+
+- story: path trastorno alimenticio
+  steps:
+  - intent: trastorno_alimenticio
+    entities:
+      - trastorno: "bulimia"
+  - action: utter_guia_alimenticio
+  - action: utter_apoyo_social
+  - action: utter_recordatorio_profesional
+
+- story: path trauma
+  steps:
+  - intent: trauma_estres
+    entities:
+      - trastorno: "TEPT"
+  - action: utter_guia_trauma
+  - action: utter_tecnica_mindfulness
+  - action: utter_recordatorio_profesional
+
+# Resolución de los conflictos de solicitud_tecnica
+- story: solicitud técnica respiración
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "respiración"
+  - action: utter_tecnica_respiracion
+
+- story: solicitud técnica mindfulness
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "mindfulness"
+  - action: utter_tecnica_mindfulness
+
+- story: solicitud técnica reestructuración
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "reestructuración"
+  - action: utter_tecnica_reestructuracion
+
+- story: técnica grounding
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "anclaje"
+  - action: action_tecnica_grounding
+
+- story: recomendación ejercicio
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "ejercicio"
+  - action: action_recomendar_ejercicio
+
+- story: manejo ira
+  steps:
+  - intent: solicitud_tecnica
+    entities:
+      - tecnica: "manejo de ira"
+  - action: action_manejo_ira_pasos
+
+# Resolución del conflicto de seguimiento_tratamiento
+- story: seguimiento tratamiento mejoría
+  steps:
+  - intent: seguimiento_tratamiento
+    entities:
+      - aspecto: "mejoría"
+  - action: utter_seguimiento_tratamiento
+
+- story: manejo recaída
+  steps:
+  - intent: seguimiento_tratamiento
+    entities:
+      - aspecto: "recaída"
+  - action: utter_manejo_recaida
+  - action: utter_recordatorio_profesional
+
+# Otras historias
+- story: solicitud recursos
+  steps:
+  - intent: solicitud_recursos
+    entities:
+      - recurso: "terapeutas"
+  - action: utter_recomendar_recursos
+
+- story: preocupación tratamiento
+  steps:
+  - intent: preocupacion_tratamiento
+    entities:
+      - preocupacion: "volverme adicto"
+  - action: utter_manejo_preocupacion
+
+- story: manejo situacional
+  steps:
+  - intent: manejo_situacional
+    entities:
+      - situacion: "reuniones sociales"
+  - action: utter_consejo_situacional
+  - action: utter_tecnica_respiracion
+
+- story: evaluación síntomas
+  steps:
+  - intent: trastorno_depresion
+  - action: action_assess_symptom_severity
+  - action: action_recommend_next_steps
+
+- story: protocolo suicidio
+  steps:
+  - intent: trastorno_depresion
+    entities:
+      - symptom: "pensamientos suicidas"
+  - action: action_protocolo_suicidio
+  - action: action_plan_recuperacion
+
+- story: manejo crisis
+  steps:
+  - intent: trastorno_ansiedad
+    entities:
+      - symptom: "crisis"
+  - action: utter_manejo_crisis_leve
+

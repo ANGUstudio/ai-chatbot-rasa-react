@@ -1,0 +1,22 @@
+version: "3.1"
+
+stories:
+  - story: saludo_simple
+    steps:
+      - intent: saludo
+      - action: utter_saludo
+
+  - story: despedida_simple
+    steps:
+      - intent: despedida
+      - action: utter_despedida
+
+  - story: agradecimiento
+    steps:
+      - intent: agradecer
+      - action: utter_agradecer
+
+  - story: presentacion_bot
+    steps:
+      - intent: presentacion
+      - action: utter_presentacion

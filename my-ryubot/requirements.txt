@@ -1,0 +1,9 @@
+rasa==3.5.11
+rasa-sdk==3.5.1
+scikit-learn
+matplotlib
+pandas
+numpy
+requests
+aiohttp
+flask

@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-intensidad",
+      "2": "I-intensidad",
+      "3": "L-intensidad",
+      "4": "U-intensidad",
+      "5": "B-sintoma",
+      "6": "I-sintoma",
+      "7": "L-sintoma",
+      "8": "U-sintoma",
+      "9": "B-tipo_crisis",
+      "10": "I-tipo_crisis",
+      "11": "L-tipo_crisis",
+      "12": "U-tipo_crisis",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-intensidad": 1,
+      "I-intensidad": 2,
+      "L-intensidad": 3,
+      "U-intensidad": 4,
+      "B-sintoma": 5,
+      "I-sintoma": 6,
+      "L-sintoma": 7,
+      "U-sintoma": 8,
+      "B-tipo_crisis": 9,
+      "I-tipo_crisis": 10,
+      "L-tipo_crisis": 11,
+      "U-tipo_crisis": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

@@ -1,0 +1,165 @@
+version: "3.1"
+
+flows:
+  evaluacion_emocional:
+    description: "Evalúa síntomas emocionales y ofrece primeras ayudas"
+    nlu_trigger:
+      - intent: sintomas_emocionales
+    steps:
+      - action: utter_reconocer_sintomas_emocionales
+      - collect: intensidad_emocional
+        description: "Nivel de intensidad de los síntomas emocionales"
+      - noop: true
+        next:
+          - if:
+              - type: slot
+                name: intensidad_emocional
+                value: severo
+            then:
+              - call: evaluacion_crisis
+          - else:
+              - action: utter_recomendacion_emocional
+
+  evaluacion_cognitiva:
+    description: "Evalúa síntomas cognitivos y ofrece estrategias"
+    nlu_trigger:
+      - intent: sintomas_cognitivos
+    steps:
+      - action: utter_reconocer_sintomas_cognitivos
+      - collect: intensidad_cognitiva
+        description: "Nivel de intensidad de los síntomas cognitivos"
+      - action: utter_recomendacion_cognitiva
+
+  evaluacion_fisica:
+    description: "Evalúa síntomas físicos y ofrece técnicas"
+    nlu_trigger:
+      - intent: sintomas_fisicos
+    steps:
+      - action: utter_reconocer_sintomas_fisicos
+      - collect: intensidad_fisica
+        description: "Nivel de intensidad de los síntomas físicos"
+      - action: utter_recomendacion_fisica
+
+  evaluacion_conductual:
+    description: "Evalúa cambios conductuales y ofrece orientación"
+    nlu_trigger:
+      - intent: sintomas_conductuales
+    steps:
+      - action: utter_reconocer_sintomas_conductuales
+      - collect: intensidad_conductual
+        description: "Nivel de intensidad de los síntomas conductuales"
+      - action: utter_recomendacion_conductual
+
+  evaluacion_crisis:
+    description: "Evaluación y manejo de situaciones de crisis"
+    nlu_trigger:
+      - intent: crisis
+    steps:
+      - action: utter_respuesta_crisis
+      - collect: tipo_crisis
+        description: "Identificar si es ataque de pánico o ideación suicida"
+      - noop: true
+        next:
+          - if:
+              - type: slot
+                name: tipo_crisis
+                value: panico
+            then:
+              - action: utter_manejo_panico
+          - if:
+              - type: slot
+                name: tipo_crisis
+                value: suicidio
+            then:
+              - action: action_protocolo_suicidio
+              - action: utter_contacto_emergencia
+
+  evaluacion_trastorno_ansiedad:
+    description: "Guía para personas con trastornos de ansiedad"
+    nlu_trigger:
+      - intent: trastorno_ansiedad
+    steps:
+      - action: utter_guia_ansiedad
+      - action: utter_recordatorio_profesional
+      - action: utter_establecer_rutina
+
+  evaluacion_trastorno_depresion:
+    description: "Guía para personas con trastornos depresivos"
+    nlu_trigger:
+      - intent: trastorno_depresion
+    steps:
+      - action: utter_guia_depresion
+      - action: utter_autocuidado
+      - action: utter_recordatorio_profesional
+
+  evaluacion_trastorno_bipolar:
+    description: "Guía para personas con trastorno bipolar"
+    nlu_trigger:
+      - intent: trastorno_bipolar
+    steps:
+      - action: utter_guia_bipolar
+      - action: utter_higiene_sueno
+      - action: utter_recordatorio_profesional
+
+  evaluacion_trastorno_alimenticio:
+    description: "Guía para personas con trastornos alimenticios"
+    nlu_trigger:
+      - intent: trastorno_alimenticio
+    steps:
+      - action: utter_guia_alimenticio
+      - action: utter_apoyo_social
+      - action: utter_recordatorio_profesional
+
+  evaluacion_trauma_estres:
+    description: "Guía para personas con trauma o estrés postraumático"
+    nlu_trigger:
+      - intent: trauma_estres
+    steps:
+      - action: utter_guia_trauma
+      - action: utter_tecnica_mindfulness
+      - action: utter_recordatorio_profesional
+
+  solicitud_tecnica_respiracion:
+    description: "Enseñanza de técnicas de respiración"
+    nlu_trigger:
+      - intent: solicitud_tecnica
+        entities:
+          - tecnica: "respiración"
+    steps:
+      - action: utter_tecnica_respiracion
+
+  solicitud_tecnica_mindfulness:
+    description: "Enseñanza de técnicas de mindfulness"
+    nlu_trigger:
+      - intent: solicitud_tecnica
+        entities:
+          - tecnica: "mindfulness"
+    steps:
+      - action: utter_tecnica_mindfulness
+
+  solicitud_tecnica_reestructuracion:
+    description: "Enseñanza de técnicas de reestructuración cognitiva"
+    nlu_trigger:
+      - intent: solicitud_tecnica
+        entities:
+          - tecnica: "reestructuración"
+    steps:
+      - action: utter_tecnica_reestructuracion
+
+  manejo_recaida:
+    description: "Apoyo en situaciones de recaída"
+    nlu_trigger:
+      - intent: seguimiento_tratamiento
+        entities:
+          - aspecto: "recaída"
+    steps:
+      - action: utter_manejo_recaida
+      - action: utter_recordatorio_profesional
+
+  manejo_situacional_especifico:
+    description: "Consejos para situaciones específicas"
+    nlu_trigger:
+      - intent: manejo_situacional
+    steps:
+      - action: utter_consejo_situacional
+      - action: utter_tecnica_respiracion
